@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val images: MutableList<Int> =
-            mutableListOf(camel, coala, fox, lion, monkey, wolf, camel, coala, fox, lion, monkey, wolf)
+            mutableListOf(damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica, damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica)
 
         val buttons = arrayOf(button1, button2, button3, button4, button5, button6, button7, button8,
             button9, button10, button11, button12)
 
-        val cardBack = code
+        val cardBack = cardback
         var clicked = 0
         var turnOver = false
         var lastClicked = -1
