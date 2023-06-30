@@ -140,11 +140,10 @@
         android:id="@+id/imageView4"
         android:layout_width="430dp"
         android:layout_height="709dp"
-        android:background="#771616"
         android:visibility="visible"
         app:srcCompat="@drawable/background"
-        tools:layout_editor_absoluteX="-10dp"
-        tools:layout_editor_absoluteY="-17dp"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:layout_editor_absoluteY="-18dp"
         tools:visibility="visible" />
 
 

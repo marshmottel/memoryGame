@@ -1,6 +1,3 @@
-// Memory Game
-// By Kurt Kaiser
-// kurtkaiser.us
 
 package com.example.memorygame
 import android.annotation.SuppressLint
