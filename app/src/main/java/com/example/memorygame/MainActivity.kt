@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
          button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            //codul pentru deschiderea jocului
+
             val intent = Intent(this@MainActivity, ContentMainActivity::class.java)
             startActivity(intent)
 
@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-/*
-        setSupportActionBar(toolbar)
 
+        setSupportActionBar(toolbar)
+/*
         val images: MutableList<Int> =
             mutableListOf(damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica, damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica)
 

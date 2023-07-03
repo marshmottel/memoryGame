@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -24,9 +25,10 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="146dp"
-        android:layout_height="146dp"
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
         android:text="@string/START"
         tools:visibility="visible" />
 
-</android.support.design.widget.CoordinatorLayout>
+</android.support.design.widget.CoordinatorLayout
+   >
