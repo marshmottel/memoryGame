@@ -3,7 +3,7 @@ package com.example.memorygame
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.toolbar
+
 import kotlinx.android.synthetic.main.content_main.*
 
 
@@ -30,12 +30,15 @@ class ContentMainActivity : AppCompatActivity() {
         setContentView(R.layout.content_main)
 
 
-        setSupportActionBar(toolbar)
-        val images: MutableList<Int> =
-            mutableListOf(damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica, damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica)
+        val images = mutableListOf(
+            damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica,
+            damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica
+        )
 
-        val buttons = arrayOf(button1, button2, button3, button4, button5, button6, button7, button8,
-            button9, button10, button11, button12, )
+        val buttons = arrayOf(
+            button1, button2, button3, button4, button5, button6,
+            button7, button8, button9, button10, button11, button12
+        )
 
         val cardBack = cardback
         var clicked = 0
@@ -44,7 +47,7 @@ class ContentMainActivity : AppCompatActivity() {
         var allCardsTurned = false
 
         images.shuffle()
-        for(i in 0..11){
+        for (i in 0..11) {
             buttons[i].setBackgroundResource(cardBack)
             buttons[i].text = "cardBack"
             buttons[i].textSize = 0.0F

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import com.example.memorygame.R.drawable.*
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        setSupportActionBar(toolbar)
+       // setSupportActionBar(toolbar)
 /*
         val images: MutableList<Int> =
             mutableListOf(damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica, damacaro, nouacupa, patrutrefla, popatrefla, valetcaro, zecepica)
