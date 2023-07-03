@@ -2,7 +2,6 @@ package com.example.memorygame
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -20,18 +19,10 @@ import kotlinx.android.synthetic.main.content_main.button6
 import kotlinx.android.synthetic.main.content_main.button7
 import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
-import android.os.Handler
-import android.os.Looper
-import android.widget.Toast
-
 
 
 class ContentMainActivity2 : AppCompatActivity() {
     private lateinit var button15: Button
-    private lateinit var lastClickedButton: Button
-    private lateinit var lastClickedImage: String
-    private var matchedPairs = 0
-    private var mediaPlayer: MediaPlayer? = null
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,58 +49,38 @@ class ContentMainActivity2 : AppCompatActivity() {
         val backyugioh = backyugioh
         var clicked = 0
         var turnOver = false
-        //var lastClicked = -1
-        //var allCardsTurned = false
+        var lastClicked = -1
+        var allCardsTurned = false
 
         images.shuffle()
-        for (i in 0 until buttons.size) {
+        for (i in 0..11) {
             buttons[i].setBackgroundResource(backyugioh)
             buttons[i].text = "backyugioh"
             buttons[i].textSize = 0.0F
-
             buttons[i].setOnClickListener {
                 if (buttons[i].text == "backyugioh" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
+                    if (clicked == 0) {
+                        lastClicked = i
+                    }
                     clicked++
+                } else if (buttons[i].text !in "backyugioh") {
+                    buttons[i].setBackgroundResource(backyugioh)
+                    buttons[i].text = "backyugioh"
+                    clicked--
+                }
 
-                    if (clicked == 1) {
-                        lastClickedButton = buttons[i]
-                        lastClickedImage = images[i].toString()
-                    } else if (clicked == 2) {
-                        if (images[i].toString() == lastClickedImage) {
-                            buttons[i].isClickable = false
-                            lastClickedButton.isClickable = false
-                            matchedPairs++
-                            if (matchedPairs == images.size / 2) {
-                                // All pairs have been matched
-                                // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer = MediaPlayer.create(this, R.raw.wow)
-                                mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                        Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
-                                    // Acțiuni de efectuat după încheierea redării sunetului
-                                    // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
-                                }
-                                mediaPlayer?.start()
-                                val intent = intent
-                                finish()
-                                startActivity(intent)
-                            }
-                        } else {
-                            turnOver = true
-                            Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(backyugioh)
-                                buttons[i].text = "backyugioh"
-                                lastClickedButton.setBackgroundResource(backyugioh)
-                                lastClickedButton.text = "backyugioh"
-                                turnOver = false
-                            }, 750)
-                        }
-
+                if (clicked == 2) {
+                    turnOver = true
+                    if (buttons[i].text == buttons[lastClicked].text) {
+                        buttons[i].isClickable = false
+                        buttons[lastClicked].isClickable = false
+                        turnOver = false
                         clicked = 0
                     }
+                } else if (clicked == 0) {
+                    turnOver = false
                 }
             }
         }
