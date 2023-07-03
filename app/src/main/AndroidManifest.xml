@@ -23,5 +23,6 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".ContentMainActivity2"/>
     </application>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
 </manifest>

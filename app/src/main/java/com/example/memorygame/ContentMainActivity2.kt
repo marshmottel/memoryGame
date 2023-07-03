@@ -21,6 +21,8 @@ import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
 import android.os.Handler
 import android.os.Looper
+import android.widget.Toast
+
 
 
 class ContentMainActivity2 : AppCompatActivity() {
@@ -80,6 +82,10 @@ class ContentMainActivity2 : AppCompatActivity() {
                             if (matchedPairs == images.size / 2) {
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
+                                Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
+                                val intent = intent
+                                finish()
+                                startActivity(intent)
                             }
                         } else {
                             turnOver = true
