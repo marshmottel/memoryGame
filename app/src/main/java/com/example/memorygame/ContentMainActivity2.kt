@@ -27,8 +27,8 @@ class ContentMainActivity2 : AppCompatActivity() {
 
 
         val images = mutableListOf(
-            dog, cat, fox, tiger, whale, cow,
-            dog, cat, fox, tiger, whale, cow,
+            yu1, yu2, yu3, yu4, yu5, yu6,
+            yu1, yu2, yu3, yu4, yu5, yu6,
         )
 
         val buttons = arrayOf(
@@ -36,7 +36,7 @@ class ContentMainActivity2 : AppCompatActivity() {
             button7, button8, button9, button10, button11, button12
         )
 
-        val cardBack = cardback
+        val backyugioh = backyugioh
         var clicked = 0
         var turnOver = false
         var lastClicked = -1
@@ -44,20 +44,20 @@ class ContentMainActivity2 : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0..11) {
-            buttons[i].setBackgroundResource(cardBack)
-            buttons[i].text = "cardBack"
+            buttons[i].setBackgroundResource(backyugioh)
+            buttons[i].text = "backyugioh"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
-                if (buttons[i].text == "cardBack" && !turnOver) {
+                if (buttons[i].text == "backyugioh" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     if (clicked == 0) {
                         lastClicked = i
                     }
                     clicked++
-                } else if (buttons[i].text !in "cardBack") {
-                    buttons[i].setBackgroundResource(cardBack)
-                    buttons[i].text = "cardBack"
+                } else if (buttons[i].text !in "backyugioh") {
+                    buttons[i].setBackgroundResource(backyugioh)
+                    buttons[i].text = "backyugioh"
                     clicked--
                 }
 
