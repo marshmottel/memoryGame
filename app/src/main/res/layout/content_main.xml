@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,7 +30,8 @@
         android:layout_marginTop="14dp"
         android:background="@drawable/cardback"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button2"
@@ -41,7 +43,8 @@
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button3"
@@ -51,7 +54,8 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button4"
@@ -61,7 +65,9 @@
         android:layout_marginTop="14dp"
         android:background="@drawable/cardback"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        android:contentDescription="Button for performing a specific action"
+        />
 
     <Button
         android:id="@+id/button5"
@@ -73,7 +79,8 @@
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button6"
@@ -83,7 +90,8 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button7"
@@ -93,7 +101,8 @@
         android:layout_marginTop="14dp"
         android:background="@drawable/cardback"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button8"
@@ -105,7 +114,8 @@
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button9"
@@ -115,7 +125,8 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button10"
@@ -125,7 +136,8 @@
         android:layout_marginTop="14dp"
         android:background="@drawable/cardback"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button11"
@@ -137,7 +149,8 @@
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toStartOf="@+id/button12"
         app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        android:contentDescription="Button for performing a specific action" />
 
     <Button
         android:id="@+id/button12"
@@ -147,7 +160,8 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/cardback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        android:contentDescription="Button for performing a specific action" />
 
 
 
