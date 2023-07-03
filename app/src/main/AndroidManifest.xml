@@ -20,8 +20,10 @@
         </activity>
 
         <activity android:name=".ContentMainActivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".ContentMainActivity2"/>
+            android:theme="@style/AppTheme"
+            android:exported="true"/>
+        <activity android:name=".ContentMainActivity2"
+            android:exported="true"/>
     </application>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 

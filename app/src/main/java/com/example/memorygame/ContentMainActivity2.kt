@@ -2,6 +2,7 @@ package com.example.memorygame
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -30,6 +31,7 @@ class ContentMainActivity2 : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
+    private var mediaPlayer: MediaPlayer? = null
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +84,13 @@ class ContentMainActivity2 : AppCompatActivity() {
                             if (matchedPairs == images.size / 2) {
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
-                                Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
+                                mediaPlayer = MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer?.setOnCompletionListener {
+                                    Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
+                                    // Acțiuni de efectuat după încheierea redării sunetului
+                                    // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
+                                }
+                                mediaPlayer?.start()
                                 val intent = intent
                                 finish()
                                 startActivity(intent)
