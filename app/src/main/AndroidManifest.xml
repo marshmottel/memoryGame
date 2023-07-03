@@ -21,6 +21,7 @@
 
         <activity android:name=".ContentMainActivity"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".ContentMainActivity2"/>
     </application>
 
 </manifest>
