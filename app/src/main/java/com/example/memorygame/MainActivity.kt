@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
     private lateinit var button: Button
+    private lateinit var button13:Button
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        button13 =  findViewById<Button>(R.id.button13)
+        button13.setOnClickListener {
 
+            val intent = Intent(this@MainActivity, ContentMainActivity2::class.java)
+            startActivity(intent)
+
+        }
 
 
 
