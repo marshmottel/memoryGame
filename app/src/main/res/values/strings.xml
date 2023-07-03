@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">memoryGame</string>
     <string name="action_settings">Settings</string>
-    <string name="START">START</string>
+    <string name="START">CARTI</string>
+    <string name="START1">ANIMALE</string>
+    <string name="START2">4X3</string>
 </resources>
