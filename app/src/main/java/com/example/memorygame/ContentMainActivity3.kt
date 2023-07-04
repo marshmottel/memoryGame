@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.content_main.button9
 import kotlinx.android.synthetic.main.content_mediu.button
 import kotlinx.android.synthetic.main.content_mediu.button13
 import kotlinx.android.synthetic.main.content_mediu.button14
+import kotlinx.android.synthetic.main.content_mediu.button15
 import kotlinx.android.synthetic.main.content_mediu.button16
 import kotlinx.android.synthetic.main.content_mediu.button17
 import kotlinx.android.synthetic.main.content_mediu.button18
@@ -29,14 +30,14 @@ import kotlinx.android.synthetic.main.content_mediu.button19
 
 
 class ContentMainActivity3 : AppCompatActivity() {
-    private lateinit var button15: Button
+    private lateinit var back: Button
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_mediu)
 
-        button15 = findViewById<Button>(R.id.back)
-        button15.setOnClickListener {
+        back = findViewById<Button>(R.id.back)
+        back.setOnClickListener {
 
             val intent2 = Intent(this@ContentMainActivity3, MainActivity::class.java)
             startActivity(intent2)
