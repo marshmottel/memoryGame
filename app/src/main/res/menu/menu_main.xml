@@ -9,21 +9,6 @@
     <item
         android:id="@+id/button11"
         android:title="@yugioh" />
-    <item
-        android:id="@+id/low"
-        android:title="@LOW"
-        />
-    <item
-        android:id="@+id/mediu"
-        android:title="@MEDIU"
-        />
-    <item
-        android:id="@+id/mediu"
-        android:title="@MEDIU"
-        />
-    <item
-        android:id="@+id/hard"
-        android:title="@HARD"
-        />
+
 
 </menu>

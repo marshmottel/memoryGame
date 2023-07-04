@@ -3,6 +3,7 @@ package com.example.memorygame
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardsButton: Button
     private lateinit var buttonyu: Button
     private lateinit var menuButton: Button
+    private lateinit var menu2Button:Button
     private lateinit var mediuButton:Button
 
     @SuppressLint("SetTextI18n")
@@ -74,11 +76,38 @@ class MainActivity : AppCompatActivity() {
             }
             popupMenu.show()
         }
+        menu2Button=findViewById(R.id.levelButton)
+        menu2Button.setOnClickListener {
+            val popupMenu=PopupMenu( this@MainActivity,menu2Button)
+            popupMenu.menuInflater.inflate(R.menu.menu_level,popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener { item->
+                when(item.itemId){
+                    R.id.low->{
+                        val intentLow=Intent(this@MainActivity,ContentMainActivity::class.java)
+                        startActivity(intentLow)
+                        true
+                    }
+                    R.id.mediu->{
+                        val intentMediu=Intent(this@MainActivity,ContentMainActivity3::class.java)
+                        startActivity(intentMediu)
+                        true
+                    }
+                    R.id.hard->{
+                        //inca nu este acest level
+                        true
+                    }
+                    else ->false
+
+                }
+            }
+            popupMenu.show()
+        }
     }
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
+     //   menuInflater.inflate(R.menu.menu_level,menu)
         return true
     }
 
@@ -112,6 +141,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             else -> super.onOptionsItemSelected(item)
+
         }
     }
 }
