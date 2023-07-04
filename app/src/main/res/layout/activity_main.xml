@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fund">
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/buttonyu"
         android:layout_width="112dp"
         android:layout_height="59dp"
         android:layout_alignParentEnd="true"
@@ -21,12 +20,12 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="98dp"
+        android:id="@+id/cardsButton"
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="159dp"
+        android:layout_marginEnd="153dp"
         android:layout_marginBottom="189dp"
         android:background="@null"
         android:text="@string/START"
@@ -36,19 +35,18 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
+        android:id="@+id/menuButton"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="167dp"
+        android:layout_marginEnd="156dp"
         android:layout_marginBottom="43dp"
         android:background="@null"
-        android:textSize="20sp"
         android:text="@string/START2"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
-         />
+        android:textSize="20sp" />
 
 </RelativeLayout>

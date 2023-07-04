@@ -1,14 +1,12 @@
 <menu
       xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.example.memorygame.MainActivity">
+
     <item
-        android:id="@+id/button"
-        android:title="@string/START"
-        />
+        android:id="@+id/button00"
+        android:title="@CARDS" />
     <item
-        android:id="@+id/button13"
-        android:title="@string/START1"
-        />
+        android:id="@+id/button11"
+        android:title="@CARDS2" />
 </menu>
