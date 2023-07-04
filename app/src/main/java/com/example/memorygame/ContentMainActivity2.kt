@@ -86,7 +86,9 @@ class ContentMainActivity2 : AppCompatActivity() {
                                 // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer = MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
-                                    Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
+                                    Handler(Looper.getMainLooper()).postDelayed({
+                                        Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
+                                    }, 100)
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
