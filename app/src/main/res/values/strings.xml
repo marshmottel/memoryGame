@@ -3,5 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="START">CARDS</string>
     <string name="START1">YU-GY-OH</string>
-    <string name="START2">settings</string>
+    <string name="START2">types of books</string>
+    <string name="START3">LEVEL</string>
+    <string name="QUIT">QUIT</string>
 </resources>
