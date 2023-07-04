@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardsButton: Button
     private lateinit var buttonyu: Button
     private lateinit var menuButton: Button
+    private lateinit var mediuButton:Button
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +31,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        mediuButton =findViewById<Button>(R.id.mediu)
+        mediuButton.setOnClickListener {
+        val intentmediu=Intent(this@MainActivity,ContentMainActivity3::class.java)
+        startActivity(intentmediu)
+        }
+
+
         buttonyu = findViewById<Button>(R.id.buttonyu)
         buttonyu.setOnClickListener {
 

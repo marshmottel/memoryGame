@@ -44,12 +44,12 @@ class ContentMainActivity3 : AppCompatActivity() {
         }
 
         val images = mutableListOf(
-            yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox
+            yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox,
             yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox
         )
 
         val buttons = arrayOf(
-           button button1, button2, button3, button4, button5, button6,
+           button ,button1, button2, button3, button4, button5, button6,
             button7, button8, button9, button10, button11, button12 , button13,
             button14,button15,button16,button17,button18,button19
         )
@@ -61,7 +61,7 @@ class ContentMainActivity3 : AppCompatActivity() {
         var allCardsTurned = false
 
         images.shuffle()
-        for (i in 0..11) {
+        for (i in 0..19) {
             buttons[i].setBackgroundResource(cartey)
             buttons[i].text = "cartey"
             buttons[i].textSize = 0.0F
