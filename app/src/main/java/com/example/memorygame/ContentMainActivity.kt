@@ -2,6 +2,7 @@ package com.example.memorygame
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
@@ -21,7 +22,7 @@ import kotlinx.android.synthetic.main.content_main.button7
 import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
 import android.os.Looper
-
+import android.widget.Toast
 
 
 class ContentMainActivity : AppCompatActivity() {
@@ -29,6 +30,7 @@ class ContentMainActivity : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
+    private var mediaPlayer: MediaPlayer? = null
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +84,19 @@ class ContentMainActivity : AppCompatActivity() {
                             matchedPairs++
                             if (matchedPairs == images.size / 2) {
                                 // All pairs have been matched
-                                // Perform any desired actions, such as showing a message or restarting the game
+                            // Perform any desired actions, such as showing a message or restarting the game
+                                mediaPlayer = MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer?.setOnCompletionListener {
+                                    Handler(Looper.getMainLooper()).postDelayed({
+                                    Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
+                                    }, 100)
+                                    // Acțiuni de efectuat după încheierea redării sunetului
+                                    // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
+                                }
+                                mediaPlayer?.start()
+                                val intent = intent
+                                finish()
+                                startActivity(intent)
                             }
                         } else {
                             turnOver = true

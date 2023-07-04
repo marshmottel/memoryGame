@@ -103,7 +103,7 @@ class ContentMainActivity2 : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(backyugioh)
                                 lastClickedButton.text = "backyugioh"
                                 turnOver = false
-                            }, 500)
+                            }, 750)
                         }
 
                         clicked = 0
