@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -22,6 +23,7 @@ import kotlinx.android.synthetic.main.content_main.button7
 import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
 import android.os.Looper
+import android.widget.TextView
 import android.widget.Toast
 
 
@@ -31,10 +33,30 @@ class ContentMainActivity : AppCompatActivity() {
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
+
+    // Variables for the in-game stopwatch
+    private val totalTime = 60000 // timpul total în milisecunde (60 de secunde)
+    private var timeLeft = totalTime // timpul rămas în milisecunde
+    private lateinit var timer: CountDownTimer // timer-ul
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
+
+        //The implementation of the algorithm used for time leakage
+        timer = object : CountDownTimer(totalTime.toLong(), 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                timeLeft = millisUntilFinished.toInt()
+                updateTimerText()
+            }
+
+            override fun onFinish() {
+                // Acțiunea care trebuie efectuată când timpul a expirat
+            }
+        }
+
+        timer.start()
 
 
         button15 = findViewById<Button>(R.id.back)
@@ -114,5 +136,15 @@ class ContentMainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+
+    // Function for remaining time
+    val timerTextView = findViewById<TextView>(R.id.timer)
+    private fun updateTimerText() {
+        val minutes = (timeLeft / 1000) / 60
+        val seconds = (timeLeft / 1000) % 60
+        val timeLeftFormatted = String.format("%02d:%02d", minutes, seconds)
+        timerTextView.text = timeLeftFormatted
     }
 }
