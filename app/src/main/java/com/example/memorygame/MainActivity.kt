@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardsButton: Button
     private lateinit var buttonyu: Button
     private lateinit var menuButton: Button
-    private lateinit var menu2Button:Button
+    //private lateinit var menu2Button:Button
     private lateinit var mediuButton:Button
     private lateinit var hardButton: Button
 
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
+/*
         menuButton = findViewById<Button>(R.id.menuButton)
         menuButton.setOnClickListener {
             val popupMenu = PopupMenu(this@MainActivity, menuButton)
@@ -82,9 +82,12 @@ class MainActivity : AppCompatActivity() {
             }
             popupMenu.show()
         }
-        menu2Button=findViewById(R.id.levelButton)
-        menu2Button.setOnClickListener {
-            val popupMenu=PopupMenu( this@MainActivity,menu2Button)
+
+        */
+
+        menuButton=findViewById(R.id.levelButton)
+        menuButton.setOnClickListener {
+            val popupMenu=PopupMenu( this@MainActivity,menuButton)
             popupMenu.menuInflater.inflate(R.menu.menu_level,popupMenu.menu)
             popupMenu.setOnMenuItemClickListener { item->
                 when(item.itemId){
@@ -99,7 +102,8 @@ class MainActivity : AppCompatActivity() {
                         true
                     }
                     R.id.hard->{
-                        //inca nu este acest level
+                        val intentHard=Intent(this@MainActivity,ContentMainActivity4::class.java)
+                        startActivity(intentHard)
                         true
                     }
                     else ->false
@@ -119,23 +123,28 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return when (item?.itemId) {
-            R.id.menuButton -> {
-                val popupMenu = PopupMenu(this@MainActivity, menuButton)
+            R.id.levelButton -> {
+                val popupMenu = PopupMenu(this@MainActivity, levelButton)
                 popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
 
                 popupMenu.setOnMenuItemClickListener { item ->
                     when (item.itemId) {
-                        R.id.button00 -> {
-                            val intent00 =
+                        R.id.low -> {
+                            val intentLow =
                                 Intent(this@MainActivity, ContentMainActivity::class.java)
-                            startActivity(intent00)
+                            startActivity(intentLow)
                             true
                         }
 
-                        R.id.button11 -> {
-                            val intent11 =
+                        R.id.mediu -> {
+                            val intentMediu =
                                 Intent(this@MainActivity, ContentMainActivity2::class.java)
-                            startActivity(intent11)
+                            startActivity(intentMediu)
+                            true
+                        }
+                        R.id.hard->{
+                            val intentHard =Intent(this@MainActivity,ContentMainActivity4::class.java)
+                            startActivity(intentHard)
                             true
                         }
 
