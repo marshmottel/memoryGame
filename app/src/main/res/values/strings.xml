@@ -5,6 +5,7 @@
     <string name="START1">YU-GY-OH</string>
     <string name="START2">types of books</string>
     <string name="START3">LEVEL</string>
-    <string name="START4">5x4</string>
+    <string name="START4">MEDIUM</string>
     <string name="QUIT">QUIT</string>
+    <string name="HARD">hard</string>
 </resources>
