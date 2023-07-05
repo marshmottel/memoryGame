@@ -23,14 +23,14 @@ import kotlinx.android.synthetic.main.content_main.button6
 import kotlinx.android.synthetic.main.content_main.button7
 import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
-import kotlinx.android.synthetic.main.content_medium.button
-import kotlinx.android.synthetic.main.content_medium.button13
-import kotlinx.android.synthetic.main.content_medium.button14
-import kotlinx.android.synthetic.main.content_medium.button15
-import kotlinx.android.synthetic.main.content_medium.button16
-import kotlinx.android.synthetic.main.content_medium.button17
-import kotlinx.android.synthetic.main.content_medium.button18
-import kotlinx.android.synthetic.main.content_medium.button19
+import kotlinx.android.synthetic.main.content_mediu.button
+import kotlinx.android.synthetic.main.content_mediu.button13
+import kotlinx.android.synthetic.main.content_mediu.button14
+import kotlinx.android.synthetic.main.content_mediu.button15
+import kotlinx.android.synthetic.main.content_mediu.button16
+import kotlinx.android.synthetic.main.content_mediu.button17
+import kotlinx.android.synthetic.main.content_mediu.button18
+import kotlinx.android.synthetic.main.content_mediu.button19
 
 
 class ContentMainActivity3 : AppCompatActivity() {
@@ -42,7 +42,7 @@ class ContentMainActivity3 : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.content_medium)
+        setContentView(R.layout.content_mediu)
 
         back = findViewById<Button>(R.id.back)
         back.setOnClickListener {
@@ -53,8 +53,8 @@ class ContentMainActivity3 : AppCompatActivity() {
         }
 
         val images = mutableListOf(
-            yu1, yu2, yu3, yu4, yu5, yu6,yu7,yu8,yu9,yu10,
-            yu1, yu2, yu3, yu4, yu5, yu6,yu7,yu8,yu9,yu10,
+            yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox,
+            yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox
         )
 
         val buttons = arrayOf(

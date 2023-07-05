@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuButton: Button
     private lateinit var menu2Button:Button
     private lateinit var mediuButton:Button
+    private lateinit var hardButton: Button
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +47,11 @@ class MainActivity : AppCompatActivity() {
             val intent2 = Intent(this@MainActivity, ContentMainActivity2::class.java)
             startActivity(intent2)
 
+        }
+        hardButton=findViewById(R.id.hard)
+        hardButton.setOnClickListener {
+            val intentHard=Intent(this@MainActivity,ContentMainActivity4::class.java)
+            startActivity(intentHard)
         }
 
 
