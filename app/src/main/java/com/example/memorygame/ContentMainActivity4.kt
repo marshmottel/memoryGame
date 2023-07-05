@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.content_main.*
 import com.example.memorygame.R.drawable.*
@@ -49,10 +50,17 @@ class ContentMainActivity4 : AppCompatActivity() {
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
+    private var remainingTime = 60
+    private lateinit var backHard: Button
+    private lateinit var textViewRemainingTime: TextView
+
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cantent_hard)
+        backHard = findViewById(R.id.backHard)
+
 
         back = findViewById<Button>(R.id.backHard)
         back.setOnClickListener {
@@ -81,6 +89,32 @@ class ContentMainActivity4 : AppCompatActivity() {
         var turnOver = false
         //var lastClicked = -1
         //var allCardsTurned = false
+        val handler = Handler()
+        val timerRunnable = object : Runnable {
+            override fun run() {
+                remainingTime--
+
+                // Verificați dacă timpul a expirat
+                if (remainingTime <= 0) {
+                    // Afisați "Game Over" sau executați acțiunile corespunzătoare
+                    Toast.makeText(this@ContentMainActivity4, "Game Over", Toast.LENGTH_SHORT).show()
+                    for (button in buttons) {
+                        button.isClickable = false
+                    }
+
+// Activează butonul "backHard"
+                    backHard.isClickable = true
+                    // ...
+                    return
+                }
+
+                // Programați următoarea actualizare a timerului peste 1 secundă
+                handler.postDelayed(this, 1000)
+            }
+        }
+
+// Porniți timerul
+        handler.postDelayed(timerRunnable, 1000)
 
         images.shuffle()
         for (i in 0..29) {
