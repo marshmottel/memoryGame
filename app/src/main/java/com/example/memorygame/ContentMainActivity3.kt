@@ -53,8 +53,8 @@ class ContentMainActivity3 : AppCompatActivity() {
         }
 
         val images = mutableListOf(
-            yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox,
-            yu1, yu2, yu3, yu4, yu5, yu6,cat,cow,dog,fox
+            yu1, yu2, yu3, yu4, yu5, yu6,yu7,yu8,yu9,yu10,
+            yu1, yu2, yu3, yu4, yu5, yu6,yu7,yu8,yu9,yu10,
         )
 
         val buttons = arrayOf(
