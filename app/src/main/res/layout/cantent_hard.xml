@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cartey"
+    android:background="@drawable/fundalhard"
     >
 
     <Button
@@ -28,7 +28,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.019"
@@ -44,7 +44,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         app:layout_constraintHorizontal_bias="0.232"
         app:layout_constraintStart_toStartOf="@+id/button20"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="@+id/button20"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="@+id/button20"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -110,7 +110,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -127,7 +127,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -142,7 +142,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -159,7 +159,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -175,7 +175,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -191,7 +191,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -207,7 +207,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -221,7 +221,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -237,7 +237,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -252,7 +252,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -269,7 +269,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -286,7 +286,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -301,7 +301,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -318,7 +318,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -334,7 +334,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -350,7 +350,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -366,7 +366,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -380,7 +380,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -396,7 +396,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -411,7 +411,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -427,7 +427,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -441,7 +441,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -455,7 +455,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -469,7 +469,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
     <Button
@@ -484,7 +484,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backgroundyugioh"
+        android:background="@drawable/backcards"
         />
 
 
