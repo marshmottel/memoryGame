@@ -2,9 +2,13 @@ package com.example.memorygame
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.Toast
 import kotlinx.android.synthetic.main.content_main.*
 import com.example.memorygame.R.drawable.*
 import kotlinx.android.synthetic.main.content_main.button1
@@ -31,6 +35,10 @@ import kotlinx.android.synthetic.main.content_mediu.button19
 
 class ContentMainActivity3 : AppCompatActivity() {
     private lateinit var back: Button
+    private lateinit var lastClickedButton: Button
+    private lateinit var lastClickedImage: String
+    private var matchedPairs = 0
+    private var mediaPlayer: MediaPlayer? = null
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,32 +74,54 @@ class ContentMainActivity3 : AppCompatActivity() {
             buttons[i].setBackgroundResource(cartey)
             buttons[i].text = "cartey"
             buttons[i].textSize = 0.0F
-            buttons[i].setOnClickListener {
-                if (buttons[i].text == "cartey" && !turnOver) {
-                    buttons[i].setBackgroundResource(images[i])
-                    buttons[i].setText(images[i])
-                    if (clicked == 0) {
-                        lastClicked = i
-                    }
-                    clicked++
-                } else if (buttons[i].text !in "cartey") {
-                    buttons[i].setBackgroundResource(cartey)
-                    buttons[i].text = "cartey"
-                    clicked--
-                }
+         buttons[i].setOnClickListener {
+             if(buttons[i].text=="cartey" && !turnOver)
+             {
+                 buttons[i].setBackgroundResource(images[i])
+                 buttons[i].setText(images[i])
+                 clicked++
+                 if(clicked==1)
+                 {
+                     lastClickedButton=buttons[i]
+                     lastClickedImage=images[i].toString()
+                 }
+                 else if(clicked==2)
+                 {
+                     if(images[i].toString()==lastClickedImage)
+                     {
+                         buttons[i].isClickable=false
+                         lastClickedButton.isClickable=false
+                         matchedPairs++
+                         if(matchedPairs==images.size/2)
+                         {
+                             mediaPlayer=MediaPlayer.create(this, R.raw.wow)
+                             mediaPlayer?.setOnCompletionListener {
+                                 Handler(Looper.getMainLooper()).postDelayed({
+                                     Toast.makeText(this@ContentMainActivity3, "Victory!", Toast.LENGTH_SHORT).show()
+                                 }, 100)
 
-                if (clicked == 2) {
-                    turnOver = true
-                    if (buttons[i].text == buttons[lastClicked].text) {
-                        buttons[i].isClickable = false
-                        buttons[lastClicked].isClickable = false
-                        turnOver = false
-                        clicked = 0
-                    }
-                } else if (clicked == 0) {
-                    turnOver = false
-                }
-            }
+                             }
+                             mediaPlayer?.start()
+                             val intent = intent
+                             finish()
+                             startActivity(intent)
+                         }
+                     }
+                     else
+                     {
+                         turnOver = true
+                         Handler(Looper.getMainLooper()).postDelayed({
+                             buttons[i].setBackgroundResource(cartey)
+                             buttons[i].text = "cartey"
+                             lastClickedButton.setBackgroundResource(cartey)
+                             lastClickedButton.text = "cartey"
+                             turnOver = false
+                         }, 750)
+                     }
+                     clicked =0
+                 }
+             }
+         }
         }
     }
 }
