@@ -60,6 +60,7 @@ class ContentMainActivity4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cantent_hard)
         backHard = findViewById(R.id.backHard)
+        textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
 
         back = findViewById<Button>(R.id.backHard)
@@ -90,9 +91,12 @@ class ContentMainActivity4 : AppCompatActivity() {
         //var lastClicked = -1
         //var allCardsTurned = false
         val handler = Handler()
+
         val timerRunnable = object : Runnable {
             override fun run() {
                 remainingTime--
+                // Actualizați timpul rămas în TextView
+                textViewRemainingTime.text = remainingTime.toString()
 
                 // Verificați dacă timpul a expirat
                 if (remainingTime <= 0) {
@@ -110,6 +114,7 @@ class ContentMainActivity4 : AppCompatActivity() {
 
                 // Programați următoarea actualizare a timerului peste 1 secundă
                 handler.postDelayed(this, 1000)
+
             }
         }
 
