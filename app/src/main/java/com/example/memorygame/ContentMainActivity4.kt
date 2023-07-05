@@ -19,12 +19,6 @@ class ContentMainActivity4 : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.content_mediu)
+        setContentView(R.layout.cantent_hard)
 
-        back = findViewById<Button>(R.id.back)
-        back.setOnClickListener {
-
-            val intent2 = Intent(this@ContentMainActivity4, MainActivity::class.java)
-            startActivity(intent2)
-
-        }}}
+       }}
