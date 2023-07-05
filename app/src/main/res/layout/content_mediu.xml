@@ -111,14 +111,13 @@
         android:id="@+id/button7"
         android:layout_width="80dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="342dp"
         android:background="@drawable/cartey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.309" />
 
     <Button
         android:id="@+id/button8"
@@ -284,11 +283,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.84" />
-
-    <android.support.constraint.Constraints
-        android:id="@+id/constraints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <android.support.constraint.Group
         android:id="@+id/group"
