@@ -46,14 +46,14 @@
 
     <Button
         android:id="@+id/mediu"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
+        android:layout_width="92dp"
+        android:layout_height="61dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="185dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="147dp"
         android:layout_marginBottom="606dp"
         android:background="@null"
