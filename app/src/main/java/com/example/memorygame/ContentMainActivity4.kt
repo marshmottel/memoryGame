@@ -79,8 +79,8 @@ class ContentMainActivity4 : AppCompatActivity() {
         val backcards = backcards
         var clicked = 0
         var turnOver = false
-        var lastClicked = -1
-        var allCardsTurned = false
+        //var lastClicked = -1
+        //var allCardsTurned = false
 
         images.shuffle()
         for (i in 0..29) {
