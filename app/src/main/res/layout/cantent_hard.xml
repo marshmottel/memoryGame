@@ -27,7 +27,7 @@
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,11 +41,11 @@
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/backcards"
-        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="@+id/button20"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.126" />
@@ -56,45 +56,42 @@
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="@+id/button20"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.126" />
 
     <Button
         android:id="@+id/button23"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintHorizontal_bias="0.654"
         app:layout_constraintStart_toStartOf="@+id/button20"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.126" />
 
     <Button
         android:id="@+id/button24"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.126" />
 
     <Button
         android:id="@+id/button25"
@@ -103,15 +100,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.292" />
 
     <Button
         android:id="@+id/button26"
@@ -120,30 +116,28 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.292" />
 
     <Button
         android:id="@+id/button27"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.292" />
 
     <Button
         android:id="@+id/button28"
@@ -152,15 +146,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.292" />
 
     <Button
         android:id="@+id/button29"
@@ -168,324 +161,313 @@
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.292" />
 
     <Button
         android:id="@+id/button30"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/button31"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/button32"
         android:layout_width="60dp"
         android:layout_height="85dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/button33"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/button34"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.462" />
 
     <Button
         android:id="@+id/button35"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button39"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button36"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button37"
         android:layout_width="60dp"
         android:layout_height="85dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button38"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintHorizontal_bias="0.685"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button39"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button40"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="115dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.78" />
 
     <Button
         android:id="@+id/button41"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="115dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.78" />
 
     <Button
         android:id="@+id/button42"
         android:layout_width="60dp"
         android:layout_height="85dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.78" />
 
     <Button
         android:id="@+id/button43"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="115dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.78" />
 
     <Button
         android:id="@+id/button44"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.78" />
 
     <Button
         android:id="@+id/button45"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="165dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.959" />
 
     <Button
         android:id="@+id/button46"
         android:layout_width="60dp"
         android:layout_height="85dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.959" />
 
     <Button
         android:id="@+id/button47"
         android:layout_width="60dp"
         android:layout_height="85dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.959" />
 
     <Button
         android:id="@+id/button48"
         android:layout_width="60dp"
         android:layout_height="85dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintHorizontal_bias="0.683"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.959" />
 
     <Button
         android:id="@+id/button49"
         android:layout_width="60dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/backcards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
-        android:background="@drawable/backcards"
-        />
+        app:layout_constraintVertical_bias="0.959" />
 
 
 </android.support.constraint.ConstraintLayout>

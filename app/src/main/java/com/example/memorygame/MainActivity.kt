@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             popupMenu.menuInflater.inflate(R.menu.menu_level,popupMenu.menu)
             popupMenu.setOnMenuItemClickListener { item->
                 when(item.itemId){
-                    R.id.low->{
+                    R.id.easy->{
                         val intentLow=Intent(this@MainActivity,ContentMainActivity::class.java)
                         startActivity(intentLow)
                         true
@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
 
                 popupMenu.setOnMenuItemClickListener { item ->
                     when (item.itemId) {
-                        R.id.low -> {
+                        R.id.easy -> {
                             val intentLow =
                                 Intent(this@MainActivity, ContentMainActivity::class.java)
                             startActivity(intentLow)

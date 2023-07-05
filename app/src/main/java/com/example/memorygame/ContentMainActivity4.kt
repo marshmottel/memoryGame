@@ -76,7 +76,7 @@ class ContentMainActivity4 : AppCompatActivity() {
             button40,button41,button42,button43,button44,button45,button46,
             button47,button48,button49
         )
-        val cartey = cartey
+        val backcards = backcards
         var clicked = 0
         var turnOver = false
         var lastClicked = -1
@@ -84,11 +84,11 @@ class ContentMainActivity4 : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0..29) {
-            buttons[i].setBackgroundResource(cartey)
-            buttons[i].text = "cartey"
+            buttons[i].setBackgroundResource(backcards)
+            buttons[i].text = "backcards"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
-                if(buttons[i].text=="cartey" && !turnOver)
+                if(buttons[i].text=="backcards" && !turnOver)
                 {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
@@ -124,10 +124,10 @@ class ContentMainActivity4 : AppCompatActivity() {
                         {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(cartey)
-                                buttons[i].text = "cartey"
-                                lastClickedButton.setBackgroundResource(cartey)
-                                lastClickedButton.text = "cartey"
+                                buttons[i].setBackgroundResource(backcards)
+                                buttons[i].text = "backcards"
+                                lastClickedButton.setBackgroundResource(backcards)
+                                lastClickedButton.text = "backcards"
                                 turnOver = false
                             }, 750)
                         }
