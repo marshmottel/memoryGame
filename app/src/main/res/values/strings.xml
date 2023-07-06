@@ -9,5 +9,6 @@
     <string name="HARD">SAVANNA</string>
     <string name="MEDIUM">YU-GY-OH</string>
     <string name="EASY">CARDS</string>
+    <string name="tryAGAIN">try again</string>
 
 </resources>
