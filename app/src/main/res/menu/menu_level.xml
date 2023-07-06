@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/easy"
-        android:title="@EASY"
+        android:title="EASY"
         />
     <item
         android:id="@+id/mediu"
-        android:title="@MEDIU"
+        android:title="MEDIUM"
         />
     <item
         android:id="@+id/hard"
-        android:title="@HARD"
+        android:title="HARD"
         />
 </menu>

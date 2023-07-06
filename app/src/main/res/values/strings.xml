@@ -6,5 +6,8 @@
     <string name="START3">LEVEL</string>
     <string name="START4">YU-GI-OH</string>
     <string name="QUIT">QUIT</string>
-    <string name="HARD">ANIMALE</string>
+    <string name="HARD">SAVANNA</string>
+    <string name="MEDIUM">YU-GY-OH</string>
+    <string name="EASY">CARDS</string>
+
 </resources>
