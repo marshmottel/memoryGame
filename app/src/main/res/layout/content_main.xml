@@ -17,6 +17,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#390D44"
         android:textSize="40sp"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -177,11 +178,10 @@
         app:layout_constraintVertical_bias="0.007" />
 
     <TextView
-        android:id="@+id/timer"
+        android:id="@+id/textViewRemainingTime3"
         android:layout_width="86dp"
         android:layout_height="31dp"
         android:layout_marginTop="16dp"
-        android:text="60"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
@@ -189,6 +189,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tryAgain3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="164dp"
+        android:background="@null"
+        android:textSize="20sp"
+        android:text="@string/tryAGAIN"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
