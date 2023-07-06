@@ -98,6 +98,7 @@ class ContentMainActivity4 : AppCompatActivity() {
                 // Actualizați timpul rămas în TextView
                 textViewRemainingTime.text = remainingTime.toString()
 
+
                 // Verificați dacă timpul a expirat
                 if (remainingTime <= 0) {
                     // Afisați "Game Over" sau executați acțiunile corespunzătoare
@@ -106,7 +107,7 @@ class ContentMainActivity4 : AppCompatActivity() {
                         button.isClickable = false
                     }
 
-// Activează butonul "backHard"
+// Activează butonul "QUIT"
                     backHard.isClickable = true
                     // ...
                     return
@@ -117,7 +118,7 @@ class ContentMainActivity4 : AppCompatActivity() {
 
             }
         }
-
+        textViewRemainingTime.text = remainingTime.toString()
 // Porniți timerul
         handler.postDelayed(timerRunnable, 1000)
 
@@ -168,7 +169,7 @@ class ContentMainActivity4 : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(backcards)
                                 lastClickedButton.text = "backcards"
                                 turnOver = false
-                            }, 750)
+                            }, 400)
                         }
                         clicked =0
                     }

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        mediuButton =findViewById<Button>(R.id.mediu)
+        mediuButton =findViewById<Button>(R.id.medium)
         mediuButton.setOnClickListener {
         val intentmediu=Intent(this@MainActivity,ContentMainActivity3::class.java)
         startActivity(intentmediu)
