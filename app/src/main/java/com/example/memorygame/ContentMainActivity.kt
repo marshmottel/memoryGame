@@ -28,6 +28,8 @@ class ContentMainActivity : AppCompatActivity() {
     private lateinit var back: Button
     private lateinit var textViewRemainingTime: TextView
     private var timerStarted = false
+    private var cardFlipSound: MediaPlayer? = null
+
 
 
     // Variables for the in-game stopwatch
@@ -36,9 +38,13 @@ class ContentMainActivity : AppCompatActivity() {
   //  private lateinit var timer: CountDownTimer // timer-ul
 
     @SuppressLint("SetTextI18n")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
+
+        cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
+
 
         //The implementation of the algorithm used for time leakage
         back = findViewById(R.id.back)
@@ -50,6 +56,8 @@ class ContentMainActivity : AppCompatActivity() {
             val intent2 = Intent(this@ContentMainActivity, MainActivity::class.java)
             startActivity(intent2)
         }
+
+
 
         tryAgainButton = findViewById(R.id.tryAgain3)
         tryAgainButton.setOnClickListener {
@@ -119,6 +127,13 @@ class ContentMainActivity : AppCompatActivity() {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
+                    // Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
+                    cardFlipSound?.start()
+
 
                     if (clicked == 1) {
                         lastClickedButton = buttons[i]
@@ -156,8 +171,16 @@ class ContentMainActivity : AppCompatActivity() {
 
                         clicked = 0
                     }
+
                 }
             }
         }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+
+        // Eliberează resursele MediaPlayer
+        mediaPlayer?.release()
+        mediaPlayer = null
     }
 }
