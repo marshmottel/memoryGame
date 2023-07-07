@@ -130,13 +130,11 @@ class ContentMainActivity : AppCompatActivity() {
                             lastClickedButton.isClickable = false
                             matchedPairs++
                             if (matchedPairs == images.size / 2) {
+                                Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
                                 // All pairs have been matched
                             // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer = MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                    Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 200)
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }

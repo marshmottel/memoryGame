@@ -54,6 +54,7 @@ class ContentMainActivity6 : AppCompatActivity() {
     private var remainingTime = 60
     private lateinit var backHard: Button
     private lateinit var textViewRemainingTime: TextView
+    private var timerStarted = false
 
 
     @SuppressLint("SetTextI18n")
@@ -129,8 +130,6 @@ class ContentMainActivity6 : AppCompatActivity() {
             }
         }
         textViewRemainingTime.text = remainingTime.toString()
-// Porniți timerul
-        handler.postDelayed(timerRunnable, 1000)
 
         images.shuffle()
         for (i in 0..29) {
@@ -138,6 +137,11 @@ class ContentMainActivity6 : AppCompatActivity() {
             buttons[i].text = "backcards"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
+                //Timer starts at first click
+                if (!timerStarted) {
+                    handler.postDelayed(timerRunnable, 1000)
+                    timerStarted = true
+                }
                 if(buttons[i].text=="backcards" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
@@ -154,13 +158,12 @@ class ContentMainActivity6 : AppCompatActivity() {
                             lastClickedButton.isClickable=false
                             matchedPairs++
                             if(matchedPairs==images.size/2) {
+                                Toast.makeText(this@ContentMainActivity6, "Victory!", Toast.LENGTH_SHORT).show()
+
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer= MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                        Toast.makeText(this@ContentMainActivity6, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 200)
 
                                 }
                                 mediaPlayer?.start()
