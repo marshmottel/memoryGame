@@ -28,11 +28,11 @@
             android:theme="@style/AppTheme"
             android:exported="true"/>
         <activity android:name=".ContentMainActivity4"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity android:name=".ContentMainActivity5"
-            android:exported="true"
-            />
+            android:exported="true" />
+        <activity android:name=".ContentMainActivity6"
+            android:exported="true" />
     </application>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
