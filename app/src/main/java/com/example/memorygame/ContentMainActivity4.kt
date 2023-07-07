@@ -12,38 +12,37 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.content_main.*
 import com.example.memorygame.R.drawable.*
-import kotlinx.android.synthetic.main.cantent_hard.backHard
-import kotlinx.android.synthetic.main.cantent_hard.button20
-import kotlinx.android.synthetic.main.cantent_hard.button21
-import kotlinx.android.synthetic.main.cantent_hard.button22
-import kotlinx.android.synthetic.main.cantent_hard.button23
-import kotlinx.android.synthetic.main.cantent_hard.button24
-import kotlinx.android.synthetic.main.cantent_hard.button25
-import kotlinx.android.synthetic.main.cantent_hard.button26
-import kotlinx.android.synthetic.main.cantent_hard.button27
-import kotlinx.android.synthetic.main.cantent_hard.button28
-import kotlinx.android.synthetic.main.cantent_hard.button29
-import kotlinx.android.synthetic.main.cantent_hard.button30
-import kotlinx.android.synthetic.main.cantent_hard.button31
-import kotlinx.android.synthetic.main.cantent_hard.button32
-import kotlinx.android.synthetic.main.cantent_hard.button33
-import kotlinx.android.synthetic.main.cantent_hard.button34
-import kotlinx.android.synthetic.main.cantent_hard.button35
-import kotlinx.android.synthetic.main.cantent_hard.button36
-import kotlinx.android.synthetic.main.cantent_hard.button37
-import kotlinx.android.synthetic.main.cantent_hard.button38
-import kotlinx.android.synthetic.main.cantent_hard.button39
-import kotlinx.android.synthetic.main.cantent_hard.button40
-import kotlinx.android.synthetic.main.cantent_hard.button41
-import kotlinx.android.synthetic.main.cantent_hard.button42
-import kotlinx.android.synthetic.main.cantent_hard.button43
-import kotlinx.android.synthetic.main.cantent_hard.button44
-import kotlinx.android.synthetic.main.cantent_hard.button45
-import kotlinx.android.synthetic.main.cantent_hard.button46
-import kotlinx.android.synthetic.main.cantent_hard.button47
-import kotlinx.android.synthetic.main.cantent_hard.button48
-import kotlinx.android.synthetic.main.cantent_hard.button49
-import kotlinx.android.synthetic.main.cantent_hard.tryAgain
+import kotlinx.android.synthetic.main.content_main_activity4.button20
+import kotlinx.android.synthetic.main.content_main_activity4.button21
+import kotlinx.android.synthetic.main.content_main_activity4.button22
+import kotlinx.android.synthetic.main.content_main_activity4.button23
+import kotlinx.android.synthetic.main.content_main_activity4.button24
+import kotlinx.android.synthetic.main.content_main_activity4.button25
+import kotlinx.android.synthetic.main.content_main_activity4.button26
+import kotlinx.android.synthetic.main.content_main_activity4.button27
+import kotlinx.android.synthetic.main.content_main_activity4.button28
+import kotlinx.android.synthetic.main.content_main_activity4.button29
+import kotlinx.android.synthetic.main.content_main_activity4.button30
+import kotlinx.android.synthetic.main.content_main_activity4.button31
+import kotlinx.android.synthetic.main.content_main_activity4.button32
+import kotlinx.android.synthetic.main.content_main_activity4.button33
+import kotlinx.android.synthetic.main.content_main_activity4.button34
+import kotlinx.android.synthetic.main.content_main_activity4.button35
+import kotlinx.android.synthetic.main.content_main_activity4.button36
+import kotlinx.android.synthetic.main.content_main_activity4.button37
+import kotlinx.android.synthetic.main.content_main_activity4.button38
+import kotlinx.android.synthetic.main.content_main_activity4.button39
+import kotlinx.android.synthetic.main.content_main_activity4.button40
+import kotlinx.android.synthetic.main.content_main_activity4.button41
+import kotlinx.android.synthetic.main.content_main_activity4.button42
+import kotlinx.android.synthetic.main.content_main_activity4.button43
+import kotlinx.android.synthetic.main.content_main_activity4.button44
+import kotlinx.android.synthetic.main.content_main_activity4.button45
+import kotlinx.android.synthetic.main.content_main_activity4.button46
+import kotlinx.android.synthetic.main.content_main_activity4.button47
+import kotlinx.android.synthetic.main.content_main_activity4.button48
+import kotlinx.android.synthetic.main.content_main_activity4.button49
+import kotlinx.android.synthetic.main.content_main_activity4.tryAgain
 
 
 class ContentMainActivity4 : AppCompatActivity() {
@@ -61,7 +60,7 @@ class ContentMainActivity4 : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.cantent_hard)
+        setContentView(R.layout.content_main_activity4)
         backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 

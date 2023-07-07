@@ -11,62 +11,68 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.content_main_activity2.*
-import com.example.memorygame.R.drawable.*
-import kotlinx.android.synthetic.main.content_main_activity2.button1
-import kotlinx.android.synthetic.main.content_main_activity2.button10
-import kotlinx.android.synthetic.main.content_main_activity2.button11
-import kotlinx.android.synthetic.main.content_main_activity2.button12
-import kotlinx.android.synthetic.main.content_main_activity2.button2
-import kotlinx.android.synthetic.main.content_main_activity2.button3
-import kotlinx.android.synthetic.main.content_main_activity2.button4
-import kotlinx.android.synthetic.main.content_main_activity2.button5
-import kotlinx.android.synthetic.main.content_main_activity2.button6
-import kotlinx.android.synthetic.main.content_main_activity2.button7
-import kotlinx.android.synthetic.main.content_main_activity2.button8
-import kotlinx.android.synthetic.main.content_main_activity2.button9
-import kotlinx.android.synthetic.main.content_main_activity2.textViewRemainingTime3
-import kotlinx.android.synthetic.main.content_main_activity2.tryAgain3
+import kotlinx.android.synthetic.main.content_main.back
+import kotlinx.android.synthetic.main.content_main.button1
+import kotlinx.android.synthetic.main.content_main.button10
+import kotlinx.android.synthetic.main.content_main.button11
+import kotlinx.android.synthetic.main.content_main.button12
+import kotlinx.android.synthetic.main.content_main.button2
+import kotlinx.android.synthetic.main.content_main.button3
+import kotlinx.android.synthetic.main.content_main.button4
+import kotlinx.android.synthetic.main.content_main.button5
+import kotlinx.android.synthetic.main.content_main.button6
+import kotlinx.android.synthetic.main.content_main.button7
+import kotlinx.android.synthetic.main.content_main.button8
+import kotlinx.android.synthetic.main.content_main.button9
+import kotlinx.android.synthetic.main.content_main.tryAgain3
 
-
-class ContentMainActivity2 : AppCompatActivity() {
+class ContentMainActivity1 : AppCompatActivity() {
     private lateinit var button15: Button
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
-    private lateinit var tryAgainButton3:Button
+    private lateinit var tryAgainButton3: Button
     private var remainingTime3 = 60
     private lateinit var textViewRemainingTime3: TextView
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.content_main_activity2)
+        setContentView(R.layout.content_main)
         textViewRemainingTime3 = findViewById(R.id.textViewRemainingTime3)
         button15 = findViewById<Button>(R.id.back)
         button15.setOnClickListener {
 
 
-            val intent2 = Intent(this@ContentMainActivity2, MainActivity::class.java)
+            val intent2 = Intent(this@ContentMainActivity1, MainActivity::class.java)
             startActivity(intent2)
 
         }
         tryAgainButton3 = findViewById(R.id.tryAgain3)
         tryAgainButton3.setOnClickListener {
-            val intentTryAgain2=Intent(this@ContentMainActivity2, ContentMainActivity2::class.java)
+            val intentTryAgain2= Intent(this@ContentMainActivity1, ContentMainActivity2::class.java)
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            yu1, yu2, yu3, yu4, yu5, yu6,
-            yu1, yu2, yu3, yu4, yu5, yu6,
+            R.drawable.yu1,
+            R.drawable.yu2,
+            R.drawable.yu3,
+            R.drawable.yu4,
+            R.drawable.yu5,
+            R.drawable.yu6,
+            R.drawable.yu1,
+            R.drawable.yu2,
+            R.drawable.yu3,
+            R.drawable.yu4,
+            R.drawable.yu5,
+            R.drawable.yu6,
         )
-
         val buttons = arrayOf(
             button1, button2, button3, button4, button5, button6,
             button7, button8, button9, button10, button11, button12
         )
 
-        val backyugioh = backyugioh
+        val backyugioh = R.drawable.backyugioh
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -82,7 +88,7 @@ class ContentMainActivity2 : AppCompatActivity() {
                 // Verificați dacă timpul a expirat
                 if (remainingTime3 <= 0) {
                     // Afisați "Game Over" sau executați acțiunile corespunzătoare
-                    Toast.makeText(this@ContentMainActivity2, "Game Over", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ContentMainActivity1, "Game Over", Toast.LENGTH_SHORT).show()
                     for (button in buttons) {
                         button.isClickable = false
                     }
@@ -133,7 +139,7 @@ class ContentMainActivity2 : AppCompatActivity() {
                                 mediaPlayer = MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
                                     Handler(Looper.getMainLooper()).postDelayed({
-                                        Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this@ContentMainActivity1, "Victory!", Toast.LENGTH_SHORT).show()
                                     }, 100)
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul

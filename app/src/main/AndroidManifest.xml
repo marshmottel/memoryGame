@@ -22,9 +22,17 @@
         <activity android:name=".ContentMainActivity"
             android:theme="@style/AppTheme"
             android:exported="true"/>
+        <activity android:name=".ContentMainActivity1"
+            android:exported="true"/>
         <activity android:name=".ContentMainActivity2"
             android:exported="true"/>
         <activity android:name=".ContentMainActivity3"
+            android:theme="@style/AppTheme"
+            android:exported="true"/>
+        <activity android:name=".ContentMainActivity3a"
+            android:theme="@style/AppTheme"
+            android:exported="true"/>
+        <activity android:name=".ContentMainActivity3b"
             android:theme="@style/AppTheme"
             android:exported="true"/>
         <activity android:name=".ContentMainActivity4"

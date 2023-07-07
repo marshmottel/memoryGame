@@ -11,32 +11,32 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.content_main_activity3.*
 import com.example.memorygame.R.drawable.*
-import kotlinx.android.synthetic.main.cantent_hard.backHard
-import kotlinx.android.synthetic.main.cantent_hard.textViewRemainingTime
-import kotlinx.android.synthetic.main.cantent_hard.tryAgain
-import kotlinx.android.synthetic.main.content_main.button1
-import kotlinx.android.synthetic.main.content_main.button10
-import kotlinx.android.synthetic.main.content_main.button11
-import kotlinx.android.synthetic.main.content_main.button12
-import kotlinx.android.synthetic.main.content_main.button2
-import kotlinx.android.synthetic.main.content_main.button3
-import kotlinx.android.synthetic.main.content_main.button4
-import kotlinx.android.synthetic.main.content_main.button5
-import kotlinx.android.synthetic.main.content_main.button6
-import kotlinx.android.synthetic.main.content_main.button7
-import kotlinx.android.synthetic.main.content_main.button8
-import kotlinx.android.synthetic.main.content_main.button9
-import kotlinx.android.synthetic.main.content_medium.button
-import kotlinx.android.synthetic.main.content_medium.button13
-import kotlinx.android.synthetic.main.content_medium.button14
-import kotlinx.android.synthetic.main.content_medium.button15
-import kotlinx.android.synthetic.main.content_medium.button16
-import kotlinx.android.synthetic.main.content_medium.button17
-import kotlinx.android.synthetic.main.content_medium.button18
-import kotlinx.android.synthetic.main.content_medium.button19
-import kotlinx.android.synthetic.main.content_medium.tryAgain2
+import kotlinx.android.synthetic.main.content_main_activity3.back
+import kotlinx.android.synthetic.main.content_main_activity3.textViewRemainingTime2
+import kotlinx.android.synthetic.main.content_main_activity3.tryAgain2
+import kotlinx.android.synthetic.main.content_main_activity3.button1
+import kotlinx.android.synthetic.main.content_main_activity3.button10
+import kotlinx.android.synthetic.main.content_main_activity3.button11
+import kotlinx.android.synthetic.main.content_main_activity3.button12
+import kotlinx.android.synthetic.main.content_main_activity3.button2
+import kotlinx.android.synthetic.main.content_main_activity3.button3
+import kotlinx.android.synthetic.main.content_main_activity3.button4
+import kotlinx.android.synthetic.main.content_main_activity3.button5
+import kotlinx.android.synthetic.main.content_main_activity3.button6
+import kotlinx.android.synthetic.main.content_main_activity3.button7
+import kotlinx.android.synthetic.main.content_main_activity3.button8
+import kotlinx.android.synthetic.main.content_main_activity3.button9
+import kotlinx.android.synthetic.main.content_main_activity3.button
+import kotlinx.android.synthetic.main.content_main_activity3.button13
+import kotlinx.android.synthetic.main.content_main_activity3.button14
+import kotlinx.android.synthetic.main.content_main_activity3.button15
+import kotlinx.android.synthetic.main.content_main_activity3.button16
+import kotlinx.android.synthetic.main.content_main_activity3.button17
+import kotlinx.android.synthetic.main.content_main_activity3.button18
+import kotlinx.android.synthetic.main.content_main_activity3.button19
+import kotlinx.android.synthetic.main.content_main_activity3.tryAgain2
 
 
 class ContentMainActivity3 : AppCompatActivity() {
@@ -51,7 +51,7 @@ class ContentMainActivity3 : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.content_medium)
+        setContentView(R.layout.content_main_activity3)
 
         textViewRemainingTime2 = findViewById(R.id.textViewRemainingTime2)
         back = findViewById<Button>(R.id.back)
