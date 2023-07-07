@@ -11,20 +11,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.content_main.back
-import kotlinx.android.synthetic.main.content_main.button1
-import kotlinx.android.synthetic.main.content_main.button10
-import kotlinx.android.synthetic.main.content_main.button11
-import kotlinx.android.synthetic.main.content_main.button12
-import kotlinx.android.synthetic.main.content_main.button2
-import kotlinx.android.synthetic.main.content_main.button3
-import kotlinx.android.synthetic.main.content_main.button4
-import kotlinx.android.synthetic.main.content_main.button5
-import kotlinx.android.synthetic.main.content_main.button6
-import kotlinx.android.synthetic.main.content_main.button7
-import kotlinx.android.synthetic.main.content_main.button8
-import kotlinx.android.synthetic.main.content_main.button9
-import kotlinx.android.synthetic.main.content_main.tryAgain3
+import com.example.memorygame.R.drawable.*
+import kotlinx.android.synthetic.main.content_main_activity1.*
+import kotlinx.android.synthetic.main.content_main_activity1.tryAgain3
 
 class ContentMainActivity1 : AppCompatActivity() {
     private lateinit var button15: Button
@@ -54,25 +43,15 @@ class ContentMainActivity1 : AppCompatActivity() {
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            R.drawable.yu1,
-            R.drawable.yu2,
-            R.drawable.yu3,
-            R.drawable.yu4,
-            R.drawable.yu5,
-            R.drawable.yu6,
-            R.drawable.yu1,
-            R.drawable.yu2,
-            R.drawable.yu3,
-            R.drawable.yu4,
-            R.drawable.yu5,
-            R.drawable.yu6,
+            yu1, yu2, yu3, yu4, yu5, yu6,
+            yu1, yu2, yu3, yu4, yu5, yu6,
         )
         val buttons = arrayOf(
             button1, button2, button3, button4, button5, button6,
             button7, button8, button9, button10, button11, button12
         )
 
-        val backyugioh = R.drawable.backyugioh
+        val backyugioh = backyugioh
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1

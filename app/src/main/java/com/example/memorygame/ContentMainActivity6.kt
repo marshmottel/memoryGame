@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.memorygame.R.drawable.*
 import kotlinx.android.synthetic.main.content_main_activity6.button20
 import kotlinx.android.synthetic.main.content_main_activity6.button21
 import kotlinx.android.synthetic.main.content_main_activity6.button22
@@ -59,6 +60,7 @@ class ContentMainActivity6 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main_activity6)
+
         backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
@@ -72,41 +74,15 @@ class ContentMainActivity6 : AppCompatActivity() {
         }
         tryAgainButton = findViewById(R.id.tryAgain)
         tryAgainButton.setOnClickListener {
-            val intentTryAgain= Intent(this@ContentMainActivity6, ContentMainActivity4::class.java)
+            val intentTryAgain= Intent(this@ContentMainActivity6, ContentMainActivity6::class.java)
             startActivity(intentTryAgain)
+
         }
 
         val images = mutableListOf(
-            R.drawable.elephant,
-            R.drawable.giraffe,
-            R.drawable.gorilla,
-            R.drawable.hippopotamus,
-            R.drawable.kangaroo,
-            R.drawable.koala,
-            R.drawable.leopard,
-            R.drawable.lion,
-            R.drawable.monkey,
-            R.drawable.panda,
-            R.drawable.raccoon,
-            R.drawable.sloth,
-            R.drawable.snake,
-            R.drawable.tiger,
-            R.drawable.zebra,
-            R.drawable.elephant,
-            R.drawable.giraffe,
-            R.drawable.gorilla,
-            R.drawable.hippopotamus,
-            R.drawable.kangaroo,
-            R.drawable.koala,
-            R.drawable.leopard,
-            R.drawable.lion,
-            R.drawable.monkey,
-            R.drawable.panda,
-            R.drawable.raccoon,
-            R.drawable.sloth,
-            R.drawable.snake,
-            R.drawable.tiger,
-            R.drawable.zebra,
+            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey,
+           panda, raccoon, sloth, snake, tiger, zebra, elephant, giraffe, gorilla, hippopotamus,
+            kangaroo, koala, leopard, lion, monkey, panda, raccoon, sloth, snake, tiger, zebra,
         )
 
         val buttons = arrayOf(
@@ -116,7 +92,7 @@ class ContentMainActivity6 : AppCompatActivity() {
             button40,button41,button42,button43,button44,button45,button46,
             button47,button48,button49
         )
-        val backcards = R.drawable.backcards
+        val backcards = backcards
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -162,30 +138,29 @@ class ContentMainActivity6 : AppCompatActivity() {
             buttons[i].text = "backcards"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
-                if(buttons[i].text=="backcards" && !turnOver)
-                {
+                if(buttons[i].text=="backcards" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
-                    if(clicked==1)
-                    {
+
+                    if(clicked==1) {
                         lastClickedButton=buttons[i]
                         lastClickedImage=images[i].toString()
                     }
-                    else if(clicked==2)
-                    {
+                    else if(clicked==2) {
                         if(images[i].toString()==lastClickedImage)
                         {
                             buttons[i].isClickable=false
                             lastClickedButton.isClickable=false
                             matchedPairs++
-                            if(matchedPairs==images.size/2)
-                            {
+                            if(matchedPairs==images.size/2) {
+                                // All pairs have been matched
+                                // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer= MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
                                     Handler(Looper.getMainLooper()).postDelayed({
                                         Toast.makeText(this@ContentMainActivity6, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
+                                    }, 200)
 
                                 }
                                 mediaPlayer?.start()

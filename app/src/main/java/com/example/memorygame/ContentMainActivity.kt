@@ -4,35 +4,31 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import kotlinx.android.synthetic.main.content_main.*
 import com.example.memorygame.R.drawable.*
-import kotlinx.android.synthetic.main.content_main.button1
-import kotlinx.android.synthetic.main.content_main.button10
-import kotlinx.android.synthetic.main.content_main.button11
-import kotlinx.android.synthetic.main.content_main.button12
-import kotlinx.android.synthetic.main.content_main.button2
-import kotlinx.android.synthetic.main.content_main.button3
-import kotlinx.android.synthetic.main.content_main.button4
-import kotlinx.android.synthetic.main.content_main.button5
-import kotlinx.android.synthetic.main.content_main.button6
-import kotlinx.android.synthetic.main.content_main.button7
-import kotlinx.android.synthetic.main.content_main.button8
-import kotlinx.android.synthetic.main.content_main.button9
+import android.view.View
 import android.os.Looper
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.content_main.tryAgain3
+
 
 
 class ContentMainActivity : AppCompatActivity() {
     private lateinit var button15: Button
+    private lateinit var tryAgainButton: Button
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
+    private var remainingTime = 60
+    private lateinit var back: Button
+    private lateinit var textViewRemainingTime: TextView
+    private var timerStarted = false
+
 
     // Variables for the in-game stopwatch
    // private val totalTime = 60000 // timpul total în milisecunde (60 de secunde)
@@ -45,14 +41,20 @@ class ContentMainActivity : AppCompatActivity() {
         setContentView(R.layout.content_main)
 
         //The implementation of the algorithm used for time leakage
-
+        back = findViewById(R.id.back)
+        textViewRemainingTime = findViewById(R.id.textViewRemainingTime3)
 
         button15 = findViewById<Button>(R.id.back)
         button15.setOnClickListener {
 
             val intent2 = Intent(this@ContentMainActivity, MainActivity::class.java)
             startActivity(intent2)
+        }
 
+        tryAgainButton = findViewById(R.id.tryAgain3)
+        tryAgainButton.setOnClickListener {
+            val intentTryAgain= Intent(this@ContentMainActivity, ContentMainActivity::class.java)
+            startActivity(intentTryAgain)
         }
 
 
@@ -71,14 +73,48 @@ class ContentMainActivity : AppCompatActivity() {
         var turnOver = false
         //var lastClicked = -1
       //  var allCardsTurned = false
+        val handler = Handler()
+
+        val timerRunnable = object : Runnable {
+            override fun run() {
+                remainingTime--
+                // Actualizați timpul rămas în TextView
+                textViewRemainingTime.text = remainingTime.toString()
+
+
+                // Verificați dacă timpul a expirat
+                if (remainingTime <= 0) {
+                    // Afisați "Game Over" sau executați acțiunile corespunzătoare
+                    Toast.makeText(this@ContentMainActivity, "Game Over", Toast.LENGTH_SHORT).show()
+                    for (button in buttons) {
+                        button.isClickable = false
+                    }
+                    tryAgain3.isClickable=true
+                    tryAgain3.visibility= View.VISIBLE
+                    back.isClickable = true
+                    // ...
+                    return
+                }
+
+                // Programați următoarea actualizare a timerului peste 1 secundă
+                handler.postDelayed(this, 1000)
+
+            }
+        }
+        textViewRemainingTime.text = remainingTime.toString()
+
 
         images.shuffle()
         for (i in 0 until buttons.size) {
             buttons[i].setBackgroundResource(cardBack)
             buttons[i].text = "cardBack"
             buttons[i].textSize = 0.0F
-
             buttons[i].setOnClickListener {
+                //Timer starts at first click
+                if (!timerStarted) {
+                    handler.postDelayed(timerRunnable, 1000)
+                    timerStarted = true
+                }
                 if (buttons[i].text == "cardBack" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
@@ -87,7 +123,8 @@ class ContentMainActivity : AppCompatActivity() {
                     if (clicked == 1) {
                         lastClickedButton = buttons[i]
                         lastClickedImage = images[i].toString()
-                    } else if (clicked == 2) {
+                    }
+                    else if (clicked == 2) {
                         if (images[i].toString() == lastClickedImage) {
                             buttons[i].isClickable = false
                             lastClickedButton.isClickable = false
@@ -99,7 +136,7 @@ class ContentMainActivity : AppCompatActivity() {
                                 mediaPlayer?.setOnCompletionListener {
                                     Handler(Looper.getMainLooper()).postDelayed({
                                     Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
+                                    }, 200)
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
@@ -116,7 +153,7 @@ class ContentMainActivity : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(cardBack)
                                 lastClickedButton.text = "cardBack"
                                 turnOver = false
-                            }, 750)
+                            }, 650)
                         }
 
                         clicked = 0
@@ -125,8 +162,4 @@ class ContentMainActivity : AppCompatActivity() {
             }
         }
     }
-
-
-    // Function for remaining time
-
 }
