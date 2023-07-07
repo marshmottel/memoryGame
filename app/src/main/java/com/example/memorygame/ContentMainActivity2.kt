@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.content_main.*
 import com.example.memorygame.R.drawable.*
@@ -23,6 +25,8 @@ import kotlinx.android.synthetic.main.content_main.button6
 import kotlinx.android.synthetic.main.content_main.button7
 import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
+import kotlinx.android.synthetic.main.content_medium.textViewRemainingTime2
+import kotlinx.android.synthetic.main.content_medium.tryAgain2
 
 
 class ContentMainActivity2 : AppCompatActivity() {
@@ -31,11 +35,14 @@ class ContentMainActivity2 : AppCompatActivity() {
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
+    private lateinit var tryAgainButton3:Button
+    private var remainingTime3 = 60
+    private lateinit var textViewRemainingTime3: TextView
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
-
+        textViewRemainingTime3 = findViewById(R.id.textViewRemainingTime3)
         button15 = findViewById<Button>(R.id.back)
         button15.setOnClickListener {
 
@@ -44,7 +51,11 @@ class ContentMainActivity2 : AppCompatActivity() {
             startActivity(intent2)
 
         }
-
+        tryAgainButton3 = findViewById(R.id.tryAgain3)
+        tryAgainButton3.setOnClickListener {
+            val intentTryAgain2=Intent(this@ContentMainActivity2, ContentMainActivity2::class.java)
+            startActivity(intentTryAgain2)
+        }
         val images = mutableListOf(
             yu1, yu2, yu3, yu4, yu5, yu6,
             yu1, yu2, yu3, yu4, yu5, yu6,
@@ -60,6 +71,41 @@ class ContentMainActivity2 : AppCompatActivity() {
         var turnOver = false
         //var lastClicked = -1
         //var allCardsTurned = false
+        val handler = Handler()
+        val timerRunnable = object : Runnable {
+            override fun run() {
+                remainingTime3--
+                // Actualizați timpul rămas în TextView
+                textViewRemainingTime3.text = remainingTime3.toString()
+
+
+                // Verificați dacă timpul a expirat
+                if (remainingTime3 <= 0) {
+                    // Afisați "Game Over" sau executați acțiunile corespunzătoare
+                    Toast.makeText(this@ContentMainActivity2, "Game Over", Toast.LENGTH_SHORT).show()
+                    for (button in buttons) {
+                        button.isClickable = false
+                    }
+                    tryAgain3.isClickable=true
+                    tryAgain3.visibility= View.VISIBLE
+
+
+// Activează butonul "QUIT"
+                    back.isClickable = true
+                    // ...
+                    return
+                }
+
+                // Programați următoarea actualizare a timerului peste 1 secundă
+                handler.postDelayed(this, 1000)
+
+            }
+        }
+        textViewRemainingTime3.text = remainingTime3.toString()
+// Porniți timerul
+        handler.postDelayed(timerRunnable, 1000)
+
+
 
         images.shuffle()
         for (i in 0 until buttons.size) {

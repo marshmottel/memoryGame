@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -42,10 +43,12 @@ import kotlinx.android.synthetic.main.cantent_hard.button46
 import kotlinx.android.synthetic.main.cantent_hard.button47
 import kotlinx.android.synthetic.main.cantent_hard.button48
 import kotlinx.android.synthetic.main.cantent_hard.button49
+import kotlinx.android.synthetic.main.cantent_hard.tryAgain
 
 
 class ContentMainActivity4 : AppCompatActivity() {
     private lateinit var back: Button
+    private lateinit var tryAgainButton:Button
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
@@ -69,6 +72,11 @@ class ContentMainActivity4 : AppCompatActivity() {
             val intent2 = Intent(this@ContentMainActivity4, MainActivity::class.java)
             startActivity(intent2)
 
+        }
+        tryAgainButton = findViewById(R.id.tryAgain)
+        tryAgainButton.setOnClickListener {
+            val intentTryAgain=Intent(this@ContentMainActivity4, ContentMainActivity4::class.java)
+            startActivity(intentTryAgain)
         }
 
         val images = mutableListOf(
@@ -106,6 +114,9 @@ class ContentMainActivity4 : AppCompatActivity() {
                     for (button in buttons) {
                         button.isClickable = false
                     }
+                    tryAgain.isClickable=true
+                    tryAgain.visibility= View.VISIBLE
+
 
 // Activează butonul "QUIT"
                     backHard.isClickable = true
