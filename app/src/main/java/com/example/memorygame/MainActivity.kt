@@ -3,10 +3,7 @@ package com.example.memorygame
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.PopupMenu
 import com.example.memorygame.R.drawable.*
@@ -18,8 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardsButton: Button
     private lateinit var buttonyu: Button
     private lateinit var menuButton: Button
-    //private lateinit var menu2Button:Button
-    private lateinit var mediuButton:Button
+    private lateinit var mediuButton: Button
     private lateinit var hardButton: Button
 
     @SuppressLint("SetTextI18n")
@@ -34,13 +30,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        mediuButton =findViewById<Button>(R.id.medium)
+        mediuButton = findViewById<Button>(R.id.medium)
         mediuButton.setOnClickListener {
-        val intentmediu=Intent(this@MainActivity,ContentMainActivity3::class.java)
-        startActivity(intentmediu)
+            val intentmediu = Intent(this@MainActivity, ContentMainActivity3::class.java)
+            startActivity(intentmediu)
         }
-
-
         buttonyu = findViewById<Button>(R.id.buttonyu)
         buttonyu.setOnClickListener {
 
@@ -48,65 +42,77 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
 
         }
-        hardButton=findViewById(R.id.hard)
+        hardButton = findViewById(R.id.hard)
         hardButton.setOnClickListener {
-            val intentHard=Intent(this@MainActivity,ContentMainActivity4::class.java)
+            val intentHard = Intent(this@MainActivity, ContentMainActivity4::class.java)
             startActivity(intentHard)
         }
 
 
-/*
-        menuButton = findViewById<Button>(R.id.menuButton)
+        menuButton = findViewById(R.id.levelButton)
         menuButton.setOnClickListener {
             val popupMenu = PopupMenu(this@MainActivity, menuButton)
-            popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
-
+            popupMenu.menuInflater.inflate(R.menu.menu_level, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener { item ->
                 when (item.itemId) {
-                    R.id.button00 -> {
-                        val intent00 =
-                            Intent(this@MainActivity, ContentMainActivity::class.java)
-                        startActivity(intent00)
+                    R.id.option11 -> {
+                        val intentLow = Intent(this@MainActivity, ContentMainActivity::class.java)
+                        startActivity(intentLow)
                         true
                     }
 
-                    R.id.button11 -> {
-                        val intent11 =
+                    R.id.option12 -> {
+                        val intentMediu =
                             Intent(this@MainActivity, ContentMainActivity2::class.java)
-                        startActivity(intent11)
+                        startActivity(intentMediu)
+                        true
+                    }
+
+                    R.id.option13 -> {
+                        val intentHard = Intent(this@MainActivity, ContentMainActivity1::class.java)
+                        startActivity(intentHard)
+                        true
+                    }
+
+                    R.id.option21 -> {
+                        val intentLow = Intent(this@MainActivity, ContentMainActivity3::class.java)
+                        startActivity(intentLow)
+                        true
+                    }
+
+                    R.id.option22 -> {
+                        val intentMediu =
+                            Intent(this@MainActivity, ContentMainActivity3a::class.java)
+                        startActivity(intentMediu)
+                        true
+                    }
+
+                    R.id.option23 -> {
+                        val intentHard = Intent(this@MainActivity, ContentMainActivity3::class.java)
+                        startActivity(intentHard)
+                        true
+                    }
+
+                    R.id.option31 -> {
+                        val intentLow = Intent(this@MainActivity, ContentMainActivity4::class.java)
+                        startActivity(intentLow)
+                        true
+                    }
+
+                    R.id.option32 -> {
+                        val intentMediu =
+                            Intent(this@MainActivity, ContentMainActivity5::class.java)
+                        startActivity(intentMediu)
+                        true
+                    }
+
+                    R.id.option33 -> {
+                        val intentHard = Intent(this@MainActivity, ContentMainActivity6::class.java)
+                        startActivity(intentHard)
                         true
                     }
 
                     else -> false
-                }
-            }
-            popupMenu.show()
-        }
-
-        */
-
-        menuButton=findViewById(R.id.levelButton)
-        menuButton.setOnClickListener {
-            val popupMenu=PopupMenu( this@MainActivity,menuButton)
-            popupMenu.menuInflater.inflate(R.menu.menu_level,popupMenu.menu)
-            popupMenu.setOnMenuItemClickListener { item->
-                when(item.itemId){
-                    R.id.easy->{
-                        val intentLow=Intent(this@MainActivity,ContentMainActivity::class.java)
-                        startActivity(intentLow)
-                        true
-                    }
-                    R.id.mediu->{
-                        val intentMediu=Intent(this@MainActivity,ContentMainActivity3::class.java)
-                        startActivity(intentMediu)
-                        true
-                    }
-                    R.id.hard->{
-                        val intentHard=Intent(this@MainActivity,ContentMainActivity4::class.java)
-                        startActivity(intentHard)
-                        true
-                    }
-                    else ->false
 
                 }
             }
@@ -114,11 +120,12 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+}
 
 
+/*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
-     //   menuInflater.inflate(R.menu.menu_level,menu)
         return true
     }
 
@@ -131,21 +138,21 @@ class MainActivity : AppCompatActivity() {
                 popupMenu.setOnMenuItemClickListener { item ->
                     when (item.itemId) {
                         R.id.easy -> {
-                            val intentLow =
-                                Intent(this@MainActivity, ContentMainActivity::class.java)
-                            startActivity(intentLow)
+                          //  val intentLow =
+                              //  Intent(this@MainActivity, ContentMainActivity::class.java)
+                          //  startActivity(intentLow)
                             true
                         }
 
                         R.id.mediu -> {
-                            val intentMediu =
-                                Intent(this@MainActivity, ContentMainActivity2::class.java)
-                            startActivity(intentMediu)
+                          //  val intentMediu =
+                             //   Intent(this@MainActivity, ContentMainActivity2::class.java)
+                           // startActivity(intentMediu)
                             true
                         }
                         R.id.hard->{
-                            val intentHard =Intent(this@MainActivity,ContentMainActivity4::class.java)
-                            startActivity(intentHard)
+                          //  val intentHard =Intent(this@MainActivity,ContentMainActivity4::class.java)
+                           // startActivity(intentHard)
                             true
                         }
 
@@ -155,12 +162,14 @@ class MainActivity : AppCompatActivity() {
                 popupMenu.show()
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
 
         }
+
+
     }
-}
+    */
+
 
 
 

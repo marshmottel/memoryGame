@@ -13,8 +13,6 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.content_main_activity3.*
 import com.example.memorygame.R.drawable.*
-import kotlinx.android.synthetic.main.content_main_activity3.back
-import kotlinx.android.synthetic.main.content_main_activity3.textViewRemainingTime2
 import kotlinx.android.synthetic.main.content_main_activity3.tryAgain2
 import kotlinx.android.synthetic.main.content_main_activity3.button1
 import kotlinx.android.synthetic.main.content_main_activity3.button10
@@ -36,7 +34,6 @@ import kotlinx.android.synthetic.main.content_main_activity3.button16
 import kotlinx.android.synthetic.main.content_main_activity3.button17
 import kotlinx.android.synthetic.main.content_main_activity3.button18
 import kotlinx.android.synthetic.main.content_main_activity3.button19
-import kotlinx.android.synthetic.main.content_main_activity3.tryAgain2
 
 
 class ContentMainActivity3 : AppCompatActivity() {

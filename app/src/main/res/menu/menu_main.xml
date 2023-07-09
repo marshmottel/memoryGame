@@ -4,11 +4,14 @@
       tools:context="com.example.memorygame.MainActivity">
 
     <item
-        android:id="@+id/button00"
+        android:id="@+id/cards"
         android:title="@CARDS" />
     <item
-        android:id="@+id/button11"
+        android:id="@+id/yugioh"
         android:title="@yugioh" />
+    <item
+        android:id="@+id/savana"
+        android:title="@savana"/>
 
 
 </menu>

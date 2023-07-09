@@ -10,5 +10,8 @@
     <string name="MEDIUM">YU-GY-OH</string>
     <string name="EASY">CARDS</string>
     <string name="tryAGAIN">try again</string>
+    <string name="easy">easy</string>
+    <string name="medium">medium</string>
+    <string name="hard">hard</string>
 
 </resources>

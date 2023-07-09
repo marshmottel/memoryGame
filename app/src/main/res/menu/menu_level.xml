@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/easy"
-        android:title="EASY"
-        />
+        android:title="@string/easy" >
+        <menu>
+        <item
+            android:id="@+id/option11"
+            android:title="@string/START" />
+        <item
+            android:id="@+id/option12"
+            android:title="@string/HARD" />
+        <item
+            android:id="@+id/option13"
+            android:title="@string/MEDIUM" />
+        </menu>
+    </item>
+
+
     <item
         android:id="@+id/mediu"
-        android:title="MEDIUM"
-        />
+        android:title="@string/medium" >
+    <menu>
+        <item
+            android:id="@+id/option21"
+            android:title="@string/START" />
+        <item
+            android:id="@+id/option22"
+            android:title="@string/HARD" />
+        <item
+            android:id="@+id/option23"
+            android:title="@string/MEDIUM" />
+    </menu>
+   </item>
+
+
     <item
         android:id="@+id/hard"
-        android:title="HARD"
-        />
+        android:title="@string/hard">
+    <menu>
+        <item
+            android:id="@+id/option31"
+            android:title="@string/START" />
+        <item
+            android:id="@+id/option32"
+            android:title="@string/HARD" />
+        <item
+            android:id="@+id/option33"
+            android:title="@string/MEDIUM" />
+    </menu>
+    </item>
 </menu>
