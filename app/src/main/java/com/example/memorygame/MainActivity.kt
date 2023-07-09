@@ -12,43 +12,11 @@ import kotlinx.android.synthetic.main.content_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var cardsButton: Button
-    private lateinit var buttonyu: Button
     private lateinit var menuButton: Button
-    private lateinit var mediuButton: Button
-    private lateinit var hardButton: Button
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        cardsButton = findViewById<Button>(R.id.cardsButton)
-        cardsButton.setOnClickListener {
-
-            val intent = Intent(this@MainActivity, ContentMainActivity::class.java)
-            startActivity(intent)
-
-        }
-        mediuButton = findViewById<Button>(R.id.medium)
-        mediuButton.setOnClickListener {
-            val intentmediu = Intent(this@MainActivity, ContentMainActivity3::class.java)
-            startActivity(intentmediu)
-        }
-        buttonyu = findViewById<Button>(R.id.buttonyu)
-        buttonyu.setOnClickListener {
-
-            val intent2 = Intent(this@MainActivity, ContentMainActivity2::class.java)
-            startActivity(intent2)
-
-        }
-        hardButton = findViewById(R.id.hard)
-        hardButton.setOnClickListener {
-            val intentHard = Intent(this@MainActivity, ContentMainActivity4::class.java)
-            startActivity(intentHard)
-        }
-
-
         menuButton = findViewById(R.id.levelButton)
         menuButton.setOnClickListener {
             val popupMenu = PopupMenu(this@MainActivity, menuButton)
