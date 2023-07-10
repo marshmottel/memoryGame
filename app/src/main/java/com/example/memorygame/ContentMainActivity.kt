@@ -32,7 +32,12 @@ class ContentMainActivity : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
+    private var remainingTime = 60
+    private lateinit var textViewRemainingTime: TextView
+    private var timerStarted = false
     private var mediaPlayer: MediaPlayer? = null
+    private var cardFlipSound: MediaPlayer? = null
+
 
     // Variables for the in-game stopwatch
    // private val totalTime = 60000 // timpul total în milisecunde (60 de secunde)
@@ -43,6 +48,8 @@ class ContentMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
+        cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
+
 
         //The implementation of the algorithm used for time leakage
 
@@ -84,6 +91,16 @@ class ContentMainActivity : AppCompatActivity() {
                     buttons[i].setText(images[i])
                     clicked++
 
+                    // Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
+
+                    // Redare sunet
+                    cardFlipSound?.start()
+
+
                     if (clicked == 1) {
                         lastClickedButton = buttons[i]
                         lastClickedImage = images[i].toString()
@@ -96,13 +113,10 @@ class ContentMainActivity : AppCompatActivity() {
                                 // All pairs have been matched
                             // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer = MediaPlayer.create(this, R.raw.wow)
-                                mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
                                     Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
+
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
-                                }
                                 mediaPlayer?.start()
                                 val intent = intent
                                 finish()

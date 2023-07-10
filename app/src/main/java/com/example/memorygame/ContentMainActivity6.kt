@@ -50,18 +50,19 @@ class ContentMainActivity6 : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
-    private var mediaPlayer: MediaPlayer? = null
     private var remainingTime = 60
     private lateinit var backHard: Button
     private lateinit var textViewRemainingTime: TextView
     private var timerStarted = false
-
+    private var mediaPlayer: MediaPlayer? = null
+    private var cardFlipSound: MediaPlayer? = null
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main_activity6)
 
+        cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
         backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
@@ -136,6 +137,7 @@ class ContentMainActivity6 : AppCompatActivity() {
             buttons[i].setBackgroundResource(backcards)
             buttons[i].text = "backcards"
             buttons[i].textSize = 0.0F
+
             buttons[i].setOnClickListener {
                 //Timer starts at first click
                 if (!timerStarted) {
