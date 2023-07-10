@@ -176,6 +176,8 @@ class ContentMainActivity5 : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
+                                //timer stop
+                                handler.removeCallbacks(timerRunnable)
                                 val intent = Intent(this@ContentMainActivity5,ContentMainActivity6::class.java)
                                 finish()
                                 startActivity(intent)
