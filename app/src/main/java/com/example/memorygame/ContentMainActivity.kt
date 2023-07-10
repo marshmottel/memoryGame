@@ -60,8 +60,8 @@ class ContentMainActivity : AppCompatActivity() {
         button15 = findViewById<Button>(R.id.back)
         button15.setOnClickListener {
 
-            val intent2 = Intent(this@ContentMainActivity, MainActivity::class.java)
-            startActivity(intent2)
+            val intentback = Intent(this@ContentMainActivity, MainActivity::class.java)
+            startActivity(intentback)
 
         }
 
@@ -76,7 +76,7 @@ class ContentMainActivity : AppCompatActivity() {
             button7, button8, button9, button10, button11, button12
         )
 
-        val cardBack = cardback
+        R.drawable.cardback
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -116,7 +116,7 @@ class ContentMainActivity : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0 until buttons.size) {
-            buttons[i].setBackgroundResource(cardBack)
+            buttons[i].setBackgroundResource(cardback)
             buttons[i].text = "cardBack"
             buttons[i].textSize = 0.0F
 
@@ -159,17 +159,17 @@ class ContentMainActivity : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
-                                val intent = intent
+                                val intent2 = Intent(this@ContentMainActivity,ContentMainActivity1 ::class.java)
                                 finish()
-                                startActivity(intent)
+                                startActivity(intent2)
                             }
                         }
                         else {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(cardBack)
+                                buttons[i].setBackgroundResource(cardback)
                                 buttons[i].text = "cardBack"
-                                lastClickedButton.setBackgroundResource(cardBack)
+                                lastClickedButton.setBackgroundResource(cardback)
                                 lastClickedButton.text = "cardBack"
                                 turnOver = false
                             }, 750)

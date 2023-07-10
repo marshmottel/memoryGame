@@ -138,9 +138,9 @@ class ContentMainActivity1 : AppCompatActivity() {
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
                                 mediaPlayer?.start()
-                                val intent = intent
+                                val intent2 = Intent(this@ContentMainActivity1,ContentMainActivity2::class.java)
                                 finish()
-                                startActivity(intent)
+                                startActivity(intent2)
                             }
                         }
                         else {

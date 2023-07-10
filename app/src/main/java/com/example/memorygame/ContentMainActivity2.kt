@@ -62,8 +62,8 @@ class ContentMainActivity2 : AppCompatActivity() {
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            yu1, yu2, yu3, yu4, yu5, yu6,
-            yu1, yu2, yu3, yu4, yu5, yu6,
+          giraffe, lion, elephant, koala, monkey, tiger,
+            giraffe, lion, elephant, koala, monkey, tiger
         )
 
         val buttons = arrayOf(
@@ -71,7 +71,7 @@ class ContentMainActivity2 : AppCompatActivity() {
             button7, button8, button9, button10, button11, button12
         )
 
-        val backyugioh = backyugioh
+        R.drawable.savannaback
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -110,7 +110,7 @@ class ContentMainActivity2 : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0 until buttons.size) {
-            buttons[i].setBackgroundResource(backyugioh)
+            buttons[i].setBackgroundResource(savannaback)
             buttons[i].text = "cardBack"
             buttons[i].textSize = 0.0F
 
@@ -153,16 +153,16 @@ class ContentMainActivity2 : AppCompatActivity() {
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
                                 mediaPlayer?.start()
-                                val intent = intent
+                                val intent2 = Intent(this@ContentMainActivity2,ContentMainActivity3::class.java)
                                 finish()
-                                startActivity(intent)
+                                startActivity(intent2)
                             }
                         } else {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(backyugioh)
+                                buttons[i].setBackgroundResource(savannaback)
                                 buttons[i].text = "cardBack"
-                                lastClickedButton.setBackgroundResource(backyugioh)
+                                lastClickedButton.setBackgroundResource(savannaback)
                                 lastClickedButton.text = "cardBack"
                                 turnOver = false
                             }, 750)

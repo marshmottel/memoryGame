@@ -165,7 +165,7 @@ class ContentMainActivity5 : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
-                                val intent = intent
+                                val intent = Intent(this@ContentMainActivity5,ContentMainActivity6::class.java)
                                 finish()
                                 startActivity(intent)
                             }
