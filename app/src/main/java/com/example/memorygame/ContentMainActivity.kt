@@ -85,9 +85,9 @@ class ContentMainActivity : AppCompatActivity() {
 
         val timerRunnable = object : Runnable {
             override fun run() {
-                remainingTime--
+                //remainingTime--
                 // Actualizați timpul rămas în TextView
-                textViewRemainingTime.text = remainingTime.toString()
+                //textViewRemainingTime.text = remainingTime.toString()
 
 
                 // Verificați dacă timpul a expirat
@@ -106,7 +106,10 @@ class ContentMainActivity : AppCompatActivity() {
                     // ...
                     return
                 }
-
+else if(remainingTime>0) {
+                    remainingTime--
+                    textViewRemainingTime.text = remainingTime.toString()
+                }
                 // Programați următoarea actualizare a timerului peste 1 secundă
                 handler.postDelayed(this, 1000)
 
@@ -159,9 +162,10 @@ class ContentMainActivity : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
+                                // Stop the timer
+                                handler.removeCallbacks(timerRunnable)
                                 val intent = Intent(this@ContentMainActivity,ContentMainActivity1::class.java)
                                 finish()
-                                remainingTime = 60
                                 startActivity(intent)
                             }
                         }

@@ -153,6 +153,8 @@ class ContentMainActivity2 : AppCompatActivity() {
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
                                 mediaPlayer?.start()
+                                //timer stop
+                                handler.removeCallbacks(timerRunnable)
                                 val intent2 = Intent(this@ContentMainActivity2,ContentMainActivity3::class.java)
                                 finish()
                                 startActivity(intent2)
