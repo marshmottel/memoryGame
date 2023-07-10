@@ -37,7 +37,7 @@ class ContentMainActivity2 : AppCompatActivity() {
     private var mediaPlayer: MediaPlayer? = null
     private var cardFlipSound: MediaPlayer? = null
     private lateinit var tryAgain3: Button
-    private var remainingTime3 = 60
+    private var remainingTime3 = 10
     private lateinit var textViewRemainingTime3: TextView
     private var timerStarted = false
 
