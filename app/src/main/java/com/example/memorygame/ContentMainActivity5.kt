@@ -83,10 +83,8 @@ class ContentMainActivity5 : AppCompatActivity() {
         }
 
         val images = mutableListOf(
-            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey, panda,
-            raccoon, sloth, snake, tiger, zebra,
-            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey, panda,
-            raccoon, sloth, snake, tiger, zebra,
+            yu1,yu2,yu3,yu4,yu5,yu6,yu7,yu8,yu9, yu10, yu11,yu12,yu13,yu14,yu15,
+                    yu1,yu2,yu3,yu4,yu5,yu6,yu7,yu8,yu9, yu10, yu11,yu12,yu13,yu14,yu15
         )
 
         val buttons = arrayOf(
@@ -96,7 +94,7 @@ class ContentMainActivity5 : AppCompatActivity() {
             button40,button41,button42,button43,button44,button45,button46,
             button47,button48,button49
         )
-        val backcards = backcards
+        val cartey = cartey
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -136,8 +134,8 @@ class ContentMainActivity5 : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0..29) {
-            buttons[i].setBackgroundResource(backcards)
-            buttons[i].text = "backcards"
+            buttons[i].setBackgroundResource(cartey)
+            buttons[i].text = "cartey"
             buttons[i].textSize = 0.0F
 
             buttons[i].setOnClickListener {
@@ -146,7 +144,7 @@ class ContentMainActivity5 : AppCompatActivity() {
                     handler.postDelayed(timerRunnable, 1000)
                     timerStarted = true
                 }
-                if(buttons[i].text=="backcards" && !turnOver) {
+                if(buttons[i].text=="cartey" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
@@ -187,10 +185,10 @@ class ContentMainActivity5 : AppCompatActivity() {
                         {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(backcards)
-                                buttons[i].text = "backcards"
-                                lastClickedButton.setBackgroundResource(backcards)
-                                lastClickedButton.text = "backcards"
+                                buttons[i].setBackgroundResource(cartey)
+                                buttons[i].text = "cartey"
+                                lastClickedButton.setBackgroundResource(cartey)
+                                lastClickedButton.text = "cartey"
                                 turnOver = false
                             }, 400)
                         }
