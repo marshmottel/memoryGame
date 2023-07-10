@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.memorygame.R.drawable.*
 import kotlinx.android.synthetic.main.content_main_activity3a.button
 import kotlinx.android.synthetic.main.content_main_activity3a.button1
 import kotlinx.android.synthetic.main.content_main_activity3a.button10
@@ -35,13 +36,16 @@ import kotlinx.android.synthetic.main.content_main_activity3a.tryAgain2
 
 class ContentMainActivity3a : AppCompatActivity() {
     private lateinit var back: Button
-    private lateinit var tryAgainButton2: Button
+    private lateinit var tryAgain2: Button
     private var remainingTime2 = 60
     private lateinit var textViewRemainingTime2: TextView
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
+    private var cardFlipSound: MediaPlayer? = null
+    private var timerStarted = false
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,32 +58,14 @@ class ContentMainActivity3a : AppCompatActivity() {
             startActivity(intent2)
         }
 
-        tryAgainButton2 = findViewById(R.id.tryAgain2)
-        tryAgainButton2.setOnClickListener {
+        tryAgain2 = findViewById(R.id.tryAgain2)
+        tryAgain2.setOnClickListener {
             val intentTryAgain2= Intent(this@ContentMainActivity3a, ContentMainActivity3::class.java)
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            R.drawable.yu1,
-            R.drawable.yu2,
-            R.drawable.yu3,
-            R.drawable.yu4,
-            R.drawable.yu5,
-            R.drawable.yu6,
-            R.drawable.yu7,
-            R.drawable.yu8,
-            R.drawable.yu9,
-            R.drawable.yu10,
-            R.drawable.yu1,
-            R.drawable.yu2,
-            R.drawable.yu3,
-            R.drawable.yu4,
-            R.drawable.yu5,
-            R.drawable.yu6,
-            R.drawable.yu7,
-            R.drawable.yu8,
-            R.drawable.yu9,
-            R.drawable.yu10,
+            yu1, yu2, yu3, yu4, yu5, yu6, yu7, yu8, yu9, yu10,
+            yu1, yu2, yu3, yu4, yu5,yu6, yu7, yu8, yu9, yu10,
         )
 
         val buttons = arrayOf(
