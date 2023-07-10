@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.memorygame.R.drawable.*
 import kotlinx.android.synthetic.main.content_main_activity1.*
+import kotlinx.android.synthetic.main.content_main_activity1.tryAgain3
 
 class ContentMainActivity1 : AppCompatActivity() {
     private lateinit var button15: Button
@@ -94,7 +95,7 @@ class ContentMainActivity1 : AppCompatActivity() {
         images.shuffle()
         for (i in 0 until buttons.size) {
             buttons[i].setBackgroundResource(backyugioh)
-            buttons[i].text = "backyugioh"
+            buttons[i].text = "cardBack"
             buttons[i].textSize = 0.0F
 
             buttons[i].setOnClickListener {
@@ -145,9 +146,9 @@ class ContentMainActivity1 : AppCompatActivity() {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
                                 buttons[i].setBackgroundResource(backyugioh)
-                                buttons[i].text = "backyugioh"
+                                buttons[i].text = "cardBack"
                                 lastClickedButton.setBackgroundResource(backyugioh)
-                                lastClickedButton.text = "backyugioh"
+                                lastClickedButton.text = "cardBack"
                                 turnOver = false
                             }, 750)
                         }

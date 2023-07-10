@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -59,8 +60,8 @@ class ContentMainActivity : AppCompatActivity() {
         button15 = findViewById<Button>(R.id.back)
         button15.setOnClickListener {
 
-            val intentback = Intent(this@ContentMainActivity, MainActivity::class.java)
-            startActivity(intentback)
+            val intent2 = Intent(this@ContentMainActivity, MainActivity::class.java)
+            startActivity(intent2)
 
         }
 
@@ -75,7 +76,7 @@ class ContentMainActivity : AppCompatActivity() {
             button7, button8, button9, button10, button11, button12
         )
 
-       val cardback= R.drawable.cardback
+        val cardBack = cardback
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -115,7 +116,7 @@ class ContentMainActivity : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0 until buttons.size) {
-            buttons[i].setBackgroundResource(cardback)
+            buttons[i].setBackgroundResource(cardBack)
             buttons[i].text = "cardBack"
             buttons[i].textSize = 0.0F
 
@@ -125,7 +126,7 @@ class ContentMainActivity : AppCompatActivity() {
                     handler.postDelayed(timerRunnable, 1000)
                     timerStarted = true
                 }
-                if (buttons[i].text == "cardback" && !turnOver) {
+                if (buttons[i].text == "cardBack" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
@@ -158,18 +159,18 @@ class ContentMainActivity : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
-                                val intent2 = Intent(this@ContentMainActivity,ContentMainActivity1 ::class.java)
+                                val intent = intent
                                 finish()
-                                startActivity(intent2)
+                                startActivity(intent)
                             }
                         }
                         else {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(cardback)
-                                buttons[i].text = "cardback"
-                                lastClickedButton.setBackgroundResource(cardback)
-                                lastClickedButton.text = "cardback"
+                                buttons[i].setBackgroundResource(cardBack)
+                                buttons[i].text = "cardBack"
+                                lastClickedButton.setBackgroundResource(cardBack)
+                                lastClickedButton.text = "cardBack"
                                 turnOver = false
                             }, 750)
                         }
@@ -180,4 +181,5 @@ class ContentMainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
