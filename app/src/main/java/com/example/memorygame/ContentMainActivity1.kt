@@ -13,7 +13,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.memorygame.R.drawable.*
 import kotlinx.android.synthetic.main.content_main_activity1.*
-import kotlinx.android.synthetic.main.content_main_activity1.tryAgain3
 
 class ContentMainActivity1 : AppCompatActivity() {
     private lateinit var button15: Button

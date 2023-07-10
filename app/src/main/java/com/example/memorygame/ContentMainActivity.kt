@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -76,7 +75,7 @@ class ContentMainActivity : AppCompatActivity() {
             button7, button8, button9, button10, button11, button12
         )
 
-        R.drawable.cardback
+       val cardback= R.drawable.cardback
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -126,7 +125,7 @@ class ContentMainActivity : AppCompatActivity() {
                     handler.postDelayed(timerRunnable, 1000)
                     timerStarted = true
                 }
-                if (buttons[i].text == "cardBack" && !turnOver) {
+                if (buttons[i].text == "cardback" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
@@ -168,9 +167,9 @@ class ContentMainActivity : AppCompatActivity() {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
                                 buttons[i].setBackgroundResource(cardback)
-                                buttons[i].text = "cardBack"
+                                buttons[i].text = "cardback"
                                 lastClickedButton.setBackgroundResource(cardback)
-                                lastClickedButton.text = "cardBack"
+                                lastClickedButton.text = "cardback"
                                 turnOver = false
                             }, 750)
                         }
