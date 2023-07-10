@@ -79,10 +79,12 @@ class ContentMainActivity4 : AppCompatActivity() {
         }
 
         val images = mutableListOf(
-            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey, panda,
-            raccoon, sloth, snake, tiger, zebra,
-            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey, panda,
-            raccoon, sloth, snake, tiger, zebra,
+            mediumcard17, mediumcard16, mediumcard15, mediumcard14, mediumcard13, mediumcard12,
+            mediumcard11, mediumcard10, mediumcard9, mediumcard8, mediumcard7, mediumcard4,
+            patrutrefla, popatrefla, damacaro,
+            mediumcard17, mediumcard16, mediumcard15, mediumcard14, mediumcard13, mediumcard12,
+            mediumcard11, mediumcard10, mediumcard9, mediumcard8, mediumcard7, mediumcard4,
+            patrutrefla, popatrefla, damacaro,
         )
 
         val buttons = arrayOf(
