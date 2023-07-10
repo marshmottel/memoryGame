@@ -23,8 +23,10 @@ import kotlinx.android.synthetic.main.content_main.button7
 import kotlinx.android.synthetic.main.content_main.button8
 import kotlinx.android.synthetic.main.content_main.button9
 import android.os.Looper
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.content_main_activity6.tryAgain
 
 
 class ContentMainActivity : AppCompatActivity() {
@@ -49,6 +51,7 @@ class ContentMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main)
         cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
+        textViewRemainingTime = findViewById(R.id.textViewRemainingTime3)
 
 
         //The implementation of the algorithm used for time leakage
@@ -78,6 +81,38 @@ class ContentMainActivity : AppCompatActivity() {
         var turnOver = false
         //var lastClicked = -1
       //  var allCardsTurned = false
+        val handler = Handler()
+
+        val timerRunnable = object : Runnable {
+            override fun run() {
+                remainingTime--
+                // Actualizați timpul rămas în TextView
+                textViewRemainingTime.text = remainingTime.toString()
+
+
+                // Verificați dacă timpul a expirat
+                if (remainingTime <= 0) {
+                    // Afisați "Game Over" sau executați acțiunile corespunzătoare
+                    Toast.makeText(this@ContentMainActivity, "Game Over", Toast.LENGTH_SHORT).show()
+                    for (button in buttons) {
+                        button.isClickable = false
+                    }
+                    tryAgain.isClickable=true
+                    tryAgain.visibility= View.VISIBLE
+
+
+// Activează butonul "QUIT"
+                    back.isClickable = true
+                    // ...
+                    return
+                }
+
+                // Programați următoarea actualizare a timerului peste 1 secundă
+                handler.postDelayed(this, 1000)
+
+            }
+        }
+        textViewRemainingTime.text = remainingTime.toString()
 
         images.shuffle()
         for (i in 0 until buttons.size) {
@@ -86,6 +121,11 @@ class ContentMainActivity : AppCompatActivity() {
             buttons[i].textSize = 0.0F
 
             buttons[i].setOnClickListener {
+                //Timer starts at first click
+                if (!timerStarted) {
+                    handler.postDelayed(timerRunnable, 1000)
+                    timerStarted = true
+                }
                 if (buttons[i].text == "cardBack" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
@@ -110,19 +150,21 @@ class ContentMainActivity : AppCompatActivity() {
                             lastClickedButton.isClickable = false
                             matchedPairs++
                             if (matchedPairs == images.size / 2) {
+                                Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
+
                                 // All pairs have been matched
                             // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer = MediaPlayer.create(this, R.raw.wow)
-                                    Toast.makeText(this@ContentMainActivity, "Victory!", Toast.LENGTH_SHORT).show()
+                                mediaPlayer= MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer?.setOnCompletionListener {
 
-                                    // Acțiuni de efectuat după încheierea redării sunetului
-                                    // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
+                                }
                                 mediaPlayer?.start()
                                 val intent = intent
                                 finish()
                                 startActivity(intent)
                             }
-                        } else {
+                        }
+                        else {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
                                 buttons[i].setBackgroundResource(cardBack)
@@ -139,8 +181,4 @@ class ContentMainActivity : AppCompatActivity() {
             }
         }
     }
-
-
-    // Function for remaining time
-
 }

@@ -148,6 +148,14 @@ class ContentMainActivity6 : AppCompatActivity() {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
+                    // Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
+
+                    // Redare sunet
+                    cardFlipSound?.start()
 
                     if(clicked==1) {
                         lastClickedButton=buttons[i]
