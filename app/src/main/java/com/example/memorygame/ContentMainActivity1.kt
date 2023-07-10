@@ -136,6 +136,9 @@ class ContentMainActivity1 : AppCompatActivity() {
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
+                                mediaPlayer?.let {
+                                    it.prepare()
+                                }
                                 mediaPlayer?.start()
                                 //timer stop
                                 handler.removeCallbacks(timerRunnable)

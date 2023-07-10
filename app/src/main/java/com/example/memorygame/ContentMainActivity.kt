@@ -161,6 +161,9 @@ else if(remainingTime>0) {
                                 mediaPlayer?.setOnCompletionListener {
 
                                 }
+                                mediaPlayer?.let {
+                                    it.prepare()
+                                }
                                 mediaPlayer?.start()
                                 // Stop the timer
                                 handler.removeCallbacks(timerRunnable)

@@ -175,6 +175,9 @@ class ContentMainActivity5 : AppCompatActivity() {
                                 mediaPlayer?.setOnCompletionListener {
 
                                 }
+                                mediaPlayer?.let {
+                                    it.prepare()
+                                }
                                 mediaPlayer?.start()
                                 //timer stop
                                 handler.removeCallbacks(timerRunnable)

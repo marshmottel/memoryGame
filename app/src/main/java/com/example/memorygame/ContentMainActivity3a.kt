@@ -156,6 +156,9 @@ class ContentMainActivity3a : AppCompatActivity() {
                                 mediaPlayer= MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
                                 }
+                                mediaPlayer?.let {
+                                    it.prepare()
+                                }
                                 mediaPlayer?.start()
                                 //timer stop
                                 handler.removeCallbacks(timerRunnable)
