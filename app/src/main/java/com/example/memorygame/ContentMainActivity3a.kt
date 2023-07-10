@@ -163,7 +163,7 @@ class ContentMainActivity3a : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
-                                val intent = intent
+                                val intent = Intent(this@ContentMainActivity3a,ContentMainActivity3b::class.java)
                                 finish()
                                 startActivity(intent)
                             }

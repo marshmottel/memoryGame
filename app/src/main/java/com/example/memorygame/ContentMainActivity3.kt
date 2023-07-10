@@ -63,8 +63,10 @@ class ContentMainActivity3 : AppCompatActivity() {
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            yu1, yu2, yu3, yu4, yu5, yu6,yu7,yu8,yu9,yu10,
-            yu1, yu2, yu3, yu4, yu5, yu6,yu7,yu8,yu9,yu10,
+            mediumcard, mediumcard2, mediumcard3, mediumcard4, mediumcard5, mediumcard6, damacaro,
+            popatrefla, zecepica, valetcaro,
+            mediumcard, mediumcard2, mediumcard3, mediumcard4, mediumcard5, mediumcard6, damacaro,
+            popatrefla, zecepica, valetcaro,
         )
 
         val buttons = arrayOf(
@@ -73,7 +75,7 @@ class ContentMainActivity3 : AppCompatActivity() {
             button14,button15,button16,button17,button18,button19
         )
 
-        val cartey = cartey
+        R.drawable.cardback1
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -117,7 +119,7 @@ class ContentMainActivity3 : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0..19) {
-            buttons[i].setBackgroundResource(cartey)
+            buttons[i].setBackgroundResource(cardback1)
             buttons[i].text = "cartey"
             buttons[i].textSize = 0.0F
          buttons[i].setOnClickListener {
@@ -148,7 +150,7 @@ class ContentMainActivity3 : AppCompatActivity() {
 
                              }
                              mediaPlayer?.start()
-                             val intent = intent
+                             val intent = Intent(this@ContentMainActivity3,ContentMainActivity3a::class.java)
                              finish()
                              startActivity(intent)
                          }
@@ -157,9 +159,9 @@ class ContentMainActivity3 : AppCompatActivity() {
                      {
                          turnOver = true
                          Handler(Looper.getMainLooper()).postDelayed({
-                             buttons[i].setBackgroundResource(cartey)
+                             buttons[i].setBackgroundResource(cardback1)
                              buttons[i].text = "cartey"
-                             lastClickedButton.setBackgroundResource(cartey)
+                             lastClickedButton.setBackgroundResource(cardback1)
                              lastClickedButton.text = "cartey"
                              turnOver = false
                          }, 750)

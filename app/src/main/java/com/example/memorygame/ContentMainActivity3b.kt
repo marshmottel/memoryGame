@@ -60,26 +60,27 @@ class ContentMainActivity3b : AppCompatActivity() {
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            R.drawable.yu1,
-            R.drawable.yu2,
-            R.drawable.yu3,
-            R.drawable.yu4,
-            R.drawable.yu5,
-            R.drawable.yu6,
-            R.drawable.yu7,
-            R.drawable.yu8,
-            R.drawable.yu9,
-            R.drawable.yu10,
-            R.drawable.yu1,
-            R.drawable.yu2,
-            R.drawable.yu3,
-            R.drawable.yu4,
-            R.drawable.yu5,
-            R.drawable.yu6,
-            R.drawable.yu7,
-            R.drawable.yu8,
-            R.drawable.yu9,
-            R.drawable.yu10,
+            R.drawable.giraffe,
+            R.drawable.gorilla,
+            R.drawable.tiger,
+            R.drawable.elephant,
+            R.drawable.hippopotamus,
+            R.drawable.lion,
+            R.drawable.leopard,
+            R.drawable.monkey,
+            R.drawable.snake,
+            R.drawable.sloth,
+            R.drawable.giraffe,
+            R.drawable.gorilla,
+            R.drawable.tiger,
+            R.drawable.elephant,
+            R.drawable.hippopotamus,
+            R.drawable.lion,
+            R.drawable.leopard,
+            R.drawable.monkey,
+            R.drawable.snake,
+            R.drawable.sloth,
+
         )
 
         val buttons = arrayOf(
@@ -88,7 +89,7 @@ class ContentMainActivity3b : AppCompatActivity() {
             button14,button15,button16,button17,button18,button19
         )
 
-        val cartey = R.drawable.cartey
+        val jumanji_back = R.drawable.jumanji_back
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -132,11 +133,11 @@ class ContentMainActivity3b : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0..19) {
-            buttons[i].setBackgroundResource(cartey)
-            buttons[i].text = "cartey"
+            buttons[i].setBackgroundResource(jumanji_back)
+            buttons[i].text = "jumanji_back"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
-                if(buttons[i].text=="cartey" && !turnOver)
+                if(buttons[i].text=="jumanji_back" && !turnOver)
                 {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
@@ -163,7 +164,7 @@ class ContentMainActivity3b : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.start()
-                                val intent = intent
+                                val intent = Intent(this@ContentMainActivity3b,ContentMainActivity4::class.java)
                                 finish()
                                 startActivity(intent)
                             }
@@ -172,10 +173,10 @@ class ContentMainActivity3b : AppCompatActivity() {
                         {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(cartey)
-                                buttons[i].text = "cartey"
-                                lastClickedButton.setBackgroundResource(cartey)
-                                lastClickedButton.text = "cartey"
+                                buttons[i].setBackgroundResource(jumanji_back)
+                                buttons[i].text = "jumanji_back"
+                                lastClickedButton.setBackgroundResource(jumanji_back)
+                                lastClickedButton.text = "jumanji_back"
                                 turnOver = false
                             }, 750)
                         }

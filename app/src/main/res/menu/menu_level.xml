@@ -9,13 +9,12 @@
             android:title="@string/START" />
         <item
             android:id="@+id/option12"
-            android:title="@string/HARD" />
+            android:title="@string/MEDIUM" />
         <item
             android:id="@+id/option13"
-            android:title="@string/MEDIUM" />
+            android:title="@string/HARD" />
         </menu>
     </item>
-
 
     <item
         android:id="@+id/mediu"
@@ -26,10 +25,10 @@
             android:title="@string/START" />
         <item
             android:id="@+id/option22"
-            android:title="@string/HARD" />
+            android:title="@string/MEDIUM" />
         <item
             android:id="@+id/option23"
-            android:title="@string/MEDIUM" />
+            android:title="@string/HARD" />
     </menu>
    </item>
 
@@ -43,10 +42,10 @@
             android:title="@string/START" />
         <item
             android:id="@+id/option32"
-            android:title="@string/HARD" />
+            android:title="@string/MEDIUM" />
         <item
             android:id="@+id/option33"
-            android:title="@string/MEDIUM" />
+            android:title="@string/HARD" />
     </menu>
     </item>
 </menu>

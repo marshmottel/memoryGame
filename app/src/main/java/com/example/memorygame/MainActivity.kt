@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
 
                     R.id.option12 -> {
                         val intentMediu =
-                            Intent(this@MainActivity, ContentMainActivity2::class.java)
+                            Intent(this@MainActivity, ContentMainActivity1::class.java)
                         startActivity(intentMediu)
                         true
                     }
 
                     R.id.option13 -> {
-                        val intentHard = Intent(this@MainActivity, ContentMainActivity1::class.java)
+                        val intentHard = Intent(this@MainActivity, ContentMainActivity2::class.java)
                         startActivity(intentHard)
                         true
                     }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     R.id.option23 -> {
-                        val intentHard = Intent(this@MainActivity, ContentMainActivity3::class.java)
+                        val intentHard = Intent(this@MainActivity, ContentMainActivity3b::class.java)
                         startActivity(intentHard)
                         true
                     }
