@@ -69,10 +69,10 @@ class ContentMainActivity3 : AppCompatActivity() {
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
-            mediumcard, mediumcard2, mediumcard3, mediumcard4, mediumcard5, mediumcard6, damacaro,
-            popatrefla, zecepica, valetcaro,
-            mediumcard, mediumcard2, mediumcard3, mediumcard4, mediumcard5, mediumcard6, damacaro,
-            popatrefla, zecepica, valetcaro,
+            mediumcard7, mediumcard8, mediumcard9, mediumcard10, mediumcard11, mediumcard12, mediumcard13,
+            mediumcard14, mediumcard15, valetcaro,
+            mediumcard7, mediumcard8, mediumcard9, mediumcard10, mediumcard11, mediumcard12, mediumcard13,
+            mediumcard14, mediumcard15, valetcaro,
         )
 
         val buttons = arrayOf(

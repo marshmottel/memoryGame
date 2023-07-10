@@ -37,7 +37,7 @@ class ContentMainActivity2 : AppCompatActivity() {
     private var mediaPlayer: MediaPlayer? = null
     private var cardFlipSound: MediaPlayer? = null
     private lateinit var tryAgain3: Button
-    private var remainingTime3 = 10
+    private var remainingTime3 = 60
     private lateinit var textViewRemainingTime3: TextView
     private var timerStarted = false
 
@@ -111,7 +111,7 @@ class ContentMainActivity2 : AppCompatActivity() {
         images.shuffle()
         for (i in 0 until buttons.size) {
             buttons[i].setBackgroundResource(savannaback)
-            buttons[i].text = "cardBack"
+            buttons[i].text = "savannaback"
             buttons[i].textSize = 0.0F
 
             buttons[i].setOnClickListener {
@@ -120,7 +120,7 @@ class ContentMainActivity2 : AppCompatActivity() {
                     handler.postDelayed(timerRunnable, 1000)
                     timerStarted = true
                 }
-                if (buttons[i].text == "cardBack" && !turnOver) {
+                if (buttons[i].text == "savannaback" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
@@ -161,9 +161,9 @@ class ContentMainActivity2 : AppCompatActivity() {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
                                 buttons[i].setBackgroundResource(savannaback)
-                                buttons[i].text = "cardBack"
+                                buttons[i].text = "savannaback"
                                 lastClickedButton.setBackgroundResource(savannaback)
-                                lastClickedButton.text = "cardBack"
+                                lastClickedButton.text = "savannaback"
                                 turnOver = false
                             }, 750)
                         }
