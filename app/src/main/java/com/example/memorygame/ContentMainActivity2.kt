@@ -35,13 +35,18 @@ class ContentMainActivity2 : AppCompatActivity() {
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
     private var mediaPlayer: MediaPlayer? = null
-    private lateinit var tryAgainButton3:Button
-    private var remainingTime3 = 60
+    private var cardFlipSound: MediaPlayer? = null
+    private lateinit var tryAgain3: Button
+    private var remainingTime3 = 10
     private lateinit var textViewRemainingTime3: TextView
+    private var timerStarted = false
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main_activity2)
+
+        cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
         textViewRemainingTime3 = findViewById(R.id.textViewRemainingTime3)
         button15 = findViewById<Button>(R.id.back)
         button15.setOnClickListener {
@@ -51,8 +56,8 @@ class ContentMainActivity2 : AppCompatActivity() {
             startActivity(intent2)
 
         }
-        tryAgainButton3 = findViewById(R.id.tryAgain3)
-        tryAgainButton3.setOnClickListener {
+        tryAgain3 = findViewById(R.id.tryAgain3)
+        tryAgain3.setOnClickListener {
             val intentTryAgain2=Intent(this@ContentMainActivity2, ContentMainActivity2::class.java)
             startActivity(intentTryAgain2)
         }
@@ -102,10 +107,6 @@ class ContentMainActivity2 : AppCompatActivity() {
             }
         }
         textViewRemainingTime3.text = remainingTime3.toString()
-// Porniți timerul
-        handler.postDelayed(timerRunnable, 1000)
-
-
 
         images.shuffle()
         for (i in 0 until buttons.size) {
@@ -114,10 +115,25 @@ class ContentMainActivity2 : AppCompatActivity() {
             buttons[i].textSize = 0.0F
 
             buttons[i].setOnClickListener {
+                //Timer starts at first click
+                if (!timerStarted) {
+                    handler.postDelayed(timerRunnable, 1000)
+                    timerStarted = true
+                }
                 if (buttons[i].text == "cardBack" && !turnOver) {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
+
+                    // Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
+
+                    // Redare sunet
+                    cardFlipSound?.start()
+
 
                     if (clicked == 1) {
                         lastClickedButton = buttons[i]
@@ -128,13 +144,11 @@ class ContentMainActivity2 : AppCompatActivity() {
                             lastClickedButton.isClickable = false
                             matchedPairs++
                             if (matchedPairs == images.size / 2) {
+                                Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer = MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                        Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
