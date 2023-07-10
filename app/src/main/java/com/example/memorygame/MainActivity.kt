@@ -2,6 +2,7 @@ package com.example.memorygame
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -13,8 +14,14 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var menuButton: Button
+    private var backgroundMusic: MediaPlayer? = null
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        backgroundMusic = MediaPlayer.create(this, R.raw.background_trap)
+        backgroundMusic?.isLooping = true // Set the music to loop indefinitely
+        backgroundMusic?.start() // Start playing the music
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         menuButton = findViewById(R.id.levelButton)
