@@ -159,10 +159,9 @@ class ContentMainActivity3 : AppCompatActivity() {
                          if(matchedPairs==images.size/2) {
                              Toast.makeText(this@ContentMainActivity3, "Victory!", Toast.LENGTH_SHORT).show()
                              // All pairs have been matched
-                             // Perform any desired actions, such as showing a message or restartin
+                             // Perform any desired actions, such as showing a message or restarting the game
                              mediaPlayer=MediaPlayer.create(this, R.raw.wow)
                              mediaPlayer?.setOnCompletionListener {
-
                              }
                              mediaPlayer?.start()
                              val intent = Intent(this@ContentMainActivity3,ContentMainActivity3a::class.java)

@@ -60,7 +60,7 @@ class ContentMainActivity3a : AppCompatActivity() {
 
         tryAgain2 = findViewById(R.id.tryAgain2)
         tryAgain2.setOnClickListener {
-            val intentTryAgain2= Intent(this@ContentMainActivity3a, ContentMainActivity3::class.java)
+            val intentTryAgain2= Intent(this@ContentMainActivity3a, ContentMainActivity3a::class.java)
             startActivity(intentTryAgain2)
         }
         val images = mutableListOf(
@@ -111,10 +111,6 @@ class ContentMainActivity3a : AppCompatActivity() {
             }
         }
         textViewRemainingTime2.text = remainingTime2.toString()
-// Porniți timerul
-        handler.postDelayed(timerRunnable, 1000)
-
-
 
         images.shuffle()
         for (i in 0..19) {
@@ -122,31 +118,42 @@ class ContentMainActivity3a : AppCompatActivity() {
             buttons[i].text = "cartey"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
+                //Timer starts at first click
+                if (!timerStarted) {
+                    handler.postDelayed(timerRunnable, 1000)
+                    timerStarted = true
+                }
                 if(buttons[i].text=="cartey" && !turnOver)
                 {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
+                    // Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
+
+                    // Redare sunet
+                    cardFlipSound?.start()
+
                     if(clicked==1)
                     {
                         lastClickedButton=buttons[i]
                         lastClickedImage=images[i].toString()
                     }
-                    else if(clicked==2)
-                    {
+                    else if(clicked==2) {
                         if(images[i].toString()==lastClickedImage)
                         {
                             buttons[i].isClickable=false
                             lastClickedButton.isClickable=false
                             matchedPairs++
-                            if(matchedPairs==images.size/2)
-                            {
+                            if(matchedPairs==images.size/2) {
+                                Toast.makeText(this@ContentMainActivity3a, "Victory!", Toast.LENGTH_SHORT).show()
+                                // All pairs have been matched
+                                // Perform any desired actions, such as showing a message or restarting the game
                                 mediaPlayer= MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                        Toast.makeText(this@ContentMainActivity3a, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
-
                                 }
                                 mediaPlayer?.start()
                                 val intent = Intent(this@ContentMainActivity3a,ContentMainActivity3b::class.java)
@@ -163,7 +170,7 @@ class ContentMainActivity3a : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(cartey)
                                 lastClickedButton.text = "cartey"
                                 turnOver = false
-                            }, 750)
+                            }, 600)
                         }
                         clicked =0
                     }
