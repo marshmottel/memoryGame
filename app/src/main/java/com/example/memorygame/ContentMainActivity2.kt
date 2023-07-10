@@ -37,7 +37,7 @@ class ContentMainActivity2 : AppCompatActivity() {
     private var mediaPlayer: MediaPlayer? = null
     private var cardFlipSound: MediaPlayer? = null
     private lateinit var tryAgain3: Button
-    private var remainingTime3 = 60
+    private var remainingTime2 = 60
     private lateinit var textViewRemainingTime3: TextView
     private var timerStarted = false
 
@@ -79,13 +79,13 @@ class ContentMainActivity2 : AppCompatActivity() {
         val handler = Handler()
         val timerRunnable = object : Runnable {
             override fun run() {
-                remainingTime3--
+                remainingTime2--
                 // Actualizați timpul rămas în TextView
-                textViewRemainingTime3.text = remainingTime3.toString()
+                textViewRemainingTime3.text = remainingTime2.toString()
 
 
                 // Verificați dacă timpul a expirat
-                if (remainingTime3 <= 0) {
+                if (remainingTime2 <= 0) {
                     // Afisați "Game Over" sau executați acțiunile corespunzătoare
                     Toast.makeText(this@ContentMainActivity2, "Game Over", Toast.LENGTH_SHORT).show()
                     for (button in buttons) {
@@ -106,7 +106,7 @@ class ContentMainActivity2 : AppCompatActivity() {
 
             }
         }
-        textViewRemainingTime3.text = remainingTime3.toString()
+        textViewRemainingTime3.text = remainingTime2.toString()
 
         images.shuffle()
         for (i in 0 until buttons.size) {

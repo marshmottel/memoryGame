@@ -97,8 +97,8 @@ class ContentMainActivity : AppCompatActivity() {
                     for (button in buttons) {
                         button.isClickable = false
                     }
-                    tryAgain.isClickable=true
-                    tryAgain.visibility= View.VISIBLE
+                    tryAgain3.isClickable=true
+                    tryAgain3.visibility= View.VISIBLE
 
 
 // Activează butonul "QUIT"
@@ -161,6 +161,7 @@ class ContentMainActivity : AppCompatActivity() {
                                 mediaPlayer?.start()
                                 val intent = Intent(this@ContentMainActivity,ContentMainActivity1::class.java)
                                 finish()
+                                remainingTime = 60
                                 startActivity(intent)
                             }
                         }

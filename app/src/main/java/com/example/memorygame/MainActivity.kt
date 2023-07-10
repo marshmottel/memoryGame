@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
-        //Background music start
+        /*/Background music start
         backgroundMusic = MediaPlayer.create(this, R.raw.background_trap)
         backgroundMusic?.isLooping = true // Set the music to loop indefinitely
-        backgroundMusic?.start() // Start playing the music
+        backgroundMusic?.start() // Start playing the music*/
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
