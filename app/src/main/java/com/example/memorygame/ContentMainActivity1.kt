@@ -94,7 +94,7 @@ class ContentMainActivity1 : AppCompatActivity() {
         images.shuffle()
         for (i in 0 until buttons.size) {
             buttons[i].setBackgroundResource(backyugioh)
-            buttons[i].text = "cardBack"
+            buttons[i].text = "backyugioh"
             buttons[i].textSize = 0.0F
 
             buttons[i].setOnClickListener {
@@ -145,9 +145,9 @@ class ContentMainActivity1 : AppCompatActivity() {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
                                 buttons[i].setBackgroundResource(backyugioh)
-                                buttons[i].text = "cardBack"
+                                buttons[i].text = "backyugioh"
                                 lastClickedButton.setBackgroundResource(backyugioh)
-                                lastClickedButton.text = "cardBack"
+                                lastClickedButton.text = "backyugioh"
                                 turnOver = false
                             }, 750)
                         }

@@ -71,7 +71,7 @@ class ContentMainActivity2 : AppCompatActivity() {
             button7, button8, button9, button10, button11, button12
         )
 
-        R.drawable.savannaback
+      val savannaback=  R.drawable.savannaback
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1

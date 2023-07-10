@@ -81,7 +81,7 @@ class ContentMainActivity3 : AppCompatActivity() {
             button14,button15,button16,button17,button18,button19
         )
 
-        R.drawable.cardback1
+       val cardback1= R.drawable.cardback1
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -122,7 +122,7 @@ class ContentMainActivity3 : AppCompatActivity() {
         images.shuffle()
         for (i in 0..19) {
             buttons[i].setBackgroundResource(cardback1)
-            buttons[i].text = "cartey"
+            buttons[i].text = "cardback1"
             buttons[i].textSize = 0.0F
 
          buttons[i].setOnClickListener {
@@ -131,7 +131,7 @@ class ContentMainActivity3 : AppCompatActivity() {
                  handler.postDelayed(timerRunnable, 1000)
                  timerStarted = true
              }
-             if(buttons[i].text=="cartey" && !turnOver)
+             if(buttons[i].text=="cardback1" && !turnOver)
              {
                  buttons[i].setBackgroundResource(images[i])
                  buttons[i].setText(images[i])
@@ -174,9 +174,9 @@ class ContentMainActivity3 : AppCompatActivity() {
                          turnOver = true
                          Handler(Looper.getMainLooper()).postDelayed({
                              buttons[i].setBackgroundResource(cardback1)
-                             buttons[i].text = "cartey"
+                             buttons[i].text = "cardback1"
                              lastClickedButton.setBackgroundResource(cardback1)
-                             lastClickedButton.text = "cartey"
+                             lastClickedButton.text = "cardback1"
                              turnOver = false
                          }, 750)
                      }
