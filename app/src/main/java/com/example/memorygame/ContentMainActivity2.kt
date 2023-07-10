@@ -153,7 +153,11 @@ class ContentMainActivity2 : AppCompatActivity() {
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
                                 }
                                 mediaPlayer?.let {
-                                    it.prepare()
+                                    try {
+                                        it.prepare()
+                                    } catch (e: IllegalStateException) {
+                                        // Handle the exception or log an error message
+                                    }
                                 }
                                 mediaPlayer?.start()
                                 //timer stop

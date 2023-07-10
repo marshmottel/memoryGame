@@ -177,7 +177,11 @@ class ContentMainActivity6 : AppCompatActivity() {
 
                                 }
                                 mediaPlayer?.let {
-                                    it.prepare()
+                                    try {
+                                        it.prepare()
+                                    } catch (e: IllegalStateException) {
+                                        // Handle the exception or log an error message
+                                    }
                                 }
                                 mediaPlayer?.start()
                                 //timer stop

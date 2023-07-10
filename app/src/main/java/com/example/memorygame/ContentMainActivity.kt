@@ -162,7 +162,11 @@ else if(remainingTime>0) {
 
                                 }
                                 mediaPlayer?.let {
-                                    it.prepare()
+                                    try {
+                                        it.prepare()
+                                    } catch (e: IllegalStateException) {
+                                        // Handle the exception or log an error message
+                                    }
                                 }
                                 mediaPlayer?.start()
                                 // Stop the timer
