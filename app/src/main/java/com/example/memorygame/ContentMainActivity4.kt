@@ -51,16 +51,20 @@ class ContentMainActivity4 : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
-    private var mediaPlayer: MediaPlayer? = null
     private var remainingTime = 60
     private lateinit var backHard: Button
     private lateinit var textViewRemainingTime: TextView
+    private var timerStarted = false
+    private var mediaPlayer: MediaPlayer? = null
+    private var cardFlipSound: MediaPlayer? = null
 
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main_activity4)
+
+        cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
         backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
@@ -129,8 +133,6 @@ class ContentMainActivity4 : AppCompatActivity() {
             }
         }
         textViewRemainingTime.text = remainingTime.toString()
-// Porniți timerul
-        handler.postDelayed(timerRunnable, 1000)
 
         images.shuffle()
         for (i in 0..29) {
@@ -138,18 +140,31 @@ class ContentMainActivity4 : AppCompatActivity() {
             buttons[i].text = "backcards"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
+                //Timer starts at first click
+                if (!timerStarted) {
+                    handler.postDelayed(timerRunnable, 1000)
+                    timerStarted = true
+                }
                 if(buttons[i].text=="backcards" && !turnOver)
                 {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
+                    // Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
+
+                    // Redare sunet
+                    cardFlipSound?.start()
+
                     if(clicked==1)
                     {
                         lastClickedButton=buttons[i]
                         lastClickedImage=images[i].toString()
                     }
-                    else if(clicked==2)
-                    {
+                    else if(clicked==2) {
                         if(images[i].toString()==lastClickedImage)
                         {
                             buttons[i].isClickable=false
@@ -157,11 +172,9 @@ class ContentMainActivity4 : AppCompatActivity() {
                             matchedPairs++
                             if(matchedPairs==images.size/2)
                             {
+                                Toast.makeText(this@ContentMainActivity4, "Victory!", Toast.LENGTH_SHORT).show()
                                 mediaPlayer=MediaPlayer.create(this, R.raw.wow)
                                 mediaPlayer?.setOnCompletionListener {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                        Toast.makeText(this@ContentMainActivity4, "Victory!", Toast.LENGTH_SHORT).show()
-                                    }, 100)
 
                                 }
                                 mediaPlayer?.start()
