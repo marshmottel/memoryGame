@@ -51,6 +51,7 @@ class ContentMainActivity3a : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content_main_activity3a)
 
+        cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
         textViewRemainingTime2 = findViewById(R.id.textViewRemainingTime2)
         back = findViewById<Button>(R.id.back)
         back.setOnClickListener {

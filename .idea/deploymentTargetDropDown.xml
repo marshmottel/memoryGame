@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Diana\.android\avd\Resizable_Experimental_API_34_2.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="adb-dmmn9x5ddyc6ssbe-SGi9ri._adb-tls-connect._tcp" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-07-10T09:29:09.257896900Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-07-10T10:14:23.936671800Z" />
   </component>
 </project>
