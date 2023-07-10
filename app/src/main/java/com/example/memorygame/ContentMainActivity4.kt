@@ -79,12 +79,10 @@ class ContentMainActivity4 : AppCompatActivity() {
         }
 
         val images = mutableListOf(
-            mediumcard10 , mediumcard16, mediumcard15, mediumcard14, mediumcard13, mediumcard12,
-            mediumcard11, mediumcard9, mediumcard8, mediumcard7, mediumcard2, mediumcard6,
-            mediumcard4, damacaro, popatrefla,
-            mediumcard10 , mediumcard16, mediumcard15, mediumcard14, mediumcard13, mediumcard12,
-            mediumcard11, mediumcard9, mediumcard8, mediumcard7, mediumcard2, mediumcard6,
-            mediumcard4, damacaro, popatrefla,
+            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey, panda,
+            raccoon, sloth, snake, tiger, zebra,
+            elephant, giraffe, gorilla, hippopotamus, kangaroo, koala, leopard, lion, monkey, panda,
+            raccoon, sloth, snake, tiger, zebra,
         )
 
         val buttons = arrayOf(
@@ -94,7 +92,7 @@ class ContentMainActivity4 : AppCompatActivity() {
             button40,button41,button42,button43,button44,button45,button46,
             button47,button48,button49
         )
-        val backmediumcard = backmediumcard
+        val backcards = backcards
         var clicked = 0
         var turnOver = false
         //var lastClicked = -1
@@ -136,11 +134,11 @@ class ContentMainActivity4 : AppCompatActivity() {
 
         images.shuffle()
         for (i in 0..29) {
-            buttons[i].setBackgroundResource(backmediumcard)
-            buttons[i].text = "backmediumcard"
+            buttons[i].setBackgroundResource(backcards)
+            buttons[i].text = "backcards"
             buttons[i].textSize = 0.0F
             buttons[i].setOnClickListener {
-                if(buttons[i].text=="backmediumcard" && !turnOver)
+                if(buttons[i].text=="backcards" && !turnOver)
                 {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
@@ -176,10 +174,10 @@ class ContentMainActivity4 : AppCompatActivity() {
                         {
                             turnOver = true
                             Handler(Looper.getMainLooper()).postDelayed({
-                                buttons[i].setBackgroundResource(backmediumcard)
-                                buttons[i].text = "backmediumcard"
-                                lastClickedButton.setBackgroundResource(backmediumcard)
-                                lastClickedButton.text = "backmediumcard"
+                                buttons[i].setBackgroundResource(backcards)
+                                buttons[i].text = "backcards"
+                                lastClickedButton.setBackgroundResource(backcards)
+                                lastClickedButton.text = "backcards"
                                 turnOver = false
                             }, 400)
                         }
