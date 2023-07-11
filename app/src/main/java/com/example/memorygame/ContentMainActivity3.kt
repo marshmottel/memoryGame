@@ -136,14 +136,14 @@ class ContentMainActivity3 : AppCompatActivity() {
                  buttons[i].setText(images[i])
                  clicked++
 
-                 // Verifică dacă sunetul anterior se redă încă
-                 if (cardFlipSound?.isPlaying == true) {
-                     cardFlipSound?.stop()
-                     cardFlipSound?.prepare()
-                 }
+                 /*/ Verifică dacă sunetul anterior se redă încă
+                    if (cardFlipSound?.isPlaying == true) {
+                        cardFlipSound?.stop()
+                        cardFlipSound?.prepare()
+                    }
 
-                 // Redare sunet
-                 cardFlipSound?.start()
+                    // Redare sunet
+                    cardFlipSound?.start()*/
 
                  if(clicked==1)
                  {

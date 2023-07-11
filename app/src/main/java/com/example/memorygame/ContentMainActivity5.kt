@@ -65,6 +65,7 @@ class ContentMainActivity5 : AppCompatActivity() {
         setContentView(R.layout.content_main_activity5)
 
         cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
+        backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
 
@@ -147,14 +148,14 @@ class ContentMainActivity5 : AppCompatActivity() {
                     buttons[i].setBackgroundResource(images[i])
                     buttons[i].setText(images[i])
                     clicked++
-                    // Verifică dacă sunetul anterior se redă încă
+                    /*/ Verifică dacă sunetul anterior se redă încă
                     if (cardFlipSound?.isPlaying == true) {
                         cardFlipSound?.stop()
                         cardFlipSound?.prepare()
                     }
 
                     // Redare sunet
-                    cardFlipSound?.start()
+                    cardFlipSound?.start()*/
 
                     if(clicked==1)
                     {
