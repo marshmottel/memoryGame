@@ -19,7 +19,7 @@ class ContentMainActivity1 : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
-    private var remainingTime3 = 60
+    private var remainingTime3 = 25
     private var mediaPlayer: MediaPlayer? = null
     private var cardFlipSound: MediaPlayer? = null
     private lateinit var textViewRemainingTime3: TextView

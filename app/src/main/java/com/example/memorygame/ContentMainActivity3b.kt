@@ -37,7 +37,7 @@ import kotlinx.android.synthetic.main.content_main_activity3b.tryAgain2
 class ContentMainActivity3b : AppCompatActivity() {
     private lateinit var back: Button
     private lateinit var tryAgainButton2: Button
-    private var remainingTime2 = 60
+    private var remainingTime2 = 45
     private lateinit var textViewRemainingTime2: TextView
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String

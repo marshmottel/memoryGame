@@ -31,7 +31,7 @@ class ContentMainActivity : AppCompatActivity() {
     private lateinit var lastClickedButton: Button
     private lateinit var lastClickedImage: String
     private var matchedPairs = 0
-    private var remainingTime = 60
+    private var remainingTime = 30
     private lateinit var textViewRemainingTime: TextView
     private var timerStarted = false
     private var mediaPlayer: MediaPlayer? = null
