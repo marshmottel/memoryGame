@@ -46,6 +46,8 @@
             android:exported="true" />
         <activity android:name=".ContentMainActivity6"
             android:exported="true" />
+        <activity android:name=".Completed"
+            android:exported="true" />
     </application>
 
 </manifest>
