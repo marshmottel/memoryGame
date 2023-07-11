@@ -25,9 +25,6 @@ import kotlinx.android.synthetic.main.content_main_activity2.button6
 import kotlinx.android.synthetic.main.content_main_activity2.button7
 import kotlinx.android.synthetic.main.content_main_activity2.button8
 import kotlinx.android.synthetic.main.content_main_activity2.button9
-import kotlinx.android.synthetic.main.content_main_activity2.textViewRemainingTime3
-import kotlinx.android.synthetic.main.content_main_activity2.tryAgain3
-
 
 class ContentMainActivity2 : AppCompatActivity() {
     private lateinit var button15: Button
@@ -147,7 +144,7 @@ class ContentMainActivity2 : AppCompatActivity() {
                                 Toast.makeText(this@ContentMainActivity2, "Victory!", Toast.LENGTH_SHORT).show()
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer = MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer = MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul

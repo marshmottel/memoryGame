@@ -152,7 +152,7 @@ class ContentMainActivity3b : AppCompatActivity() {
                                 Toast.makeText(this@ContentMainActivity3b, "Victory!", Toast.LENGTH_SHORT).show()
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer= MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer= MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
                                 }
                                 mediaPlayer?.let {

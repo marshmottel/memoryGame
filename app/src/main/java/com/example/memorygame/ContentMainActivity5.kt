@@ -65,7 +65,6 @@ class ContentMainActivity5 : AppCompatActivity() {
         setContentView(R.layout.content_main_activity5)
 
         cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
-        backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
 
@@ -171,7 +170,7 @@ class ContentMainActivity5 : AppCompatActivity() {
                             matchedPairs++
                             if(matchedPairs==images.size/2) {
                                 Toast.makeText(this@ContentMainActivity5, "Victory!", Toast.LENGTH_SHORT).show()
-                                mediaPlayer=MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer=MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
 
                                 }

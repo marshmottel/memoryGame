@@ -13,7 +13,6 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.content_main_activity3.*
 import com.example.memorygame.R.drawable.*
-import kotlinx.android.synthetic.main.content_main_activity3.tryAgain2
 import kotlinx.android.synthetic.main.content_main_activity3.button1
 import kotlinx.android.synthetic.main.content_main_activity3.button10
 import kotlinx.android.synthetic.main.content_main_activity3.button11
@@ -160,7 +159,7 @@ class ContentMainActivity3 : AppCompatActivity() {
                              Toast.makeText(this@ContentMainActivity3, "Victory!", Toast.LENGTH_SHORT).show()
                              // All pairs have been matched
                              // Perform any desired actions, such as showing a message or restarting the game
-                             mediaPlayer=MediaPlayer.create(this, R.raw.wow)
+                             mediaPlayer=MediaPlayer.create(this, R.raw.victory)
                              mediaPlayer?.setOnCompletionListener {
                              }
                              mediaPlayer?.let {

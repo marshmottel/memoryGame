@@ -32,7 +32,6 @@ import kotlinx.android.synthetic.main.content_main_activity3a.button6
 import kotlinx.android.synthetic.main.content_main_activity3a.button7
 import kotlinx.android.synthetic.main.content_main_activity3a.button8
 import kotlinx.android.synthetic.main.content_main_activity3a.button9
-import kotlinx.android.synthetic.main.content_main_activity3a.tryAgain2
 
 class ContentMainActivity3a : AppCompatActivity() {
     private lateinit var back: Button
@@ -153,7 +152,7 @@ class ContentMainActivity3a : AppCompatActivity() {
                                 Toast.makeText(this@ContentMainActivity3a, "Victory!", Toast.LENGTH_SHORT).show()
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer= MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer= MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
                                 }
                                 mediaPlayer?.let {

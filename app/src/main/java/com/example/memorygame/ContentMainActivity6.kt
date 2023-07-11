@@ -63,7 +63,6 @@ class ContentMainActivity6 : AppCompatActivity() {
         setContentView(R.layout.content_main_activity6)
 
         cardFlipSound = MediaPlayer.create(this, R.raw.card_flip)
-        backHard = findViewById(R.id.backHard)
         textViewRemainingTime = findViewById(R.id.textViewRemainingTime)
 
 
@@ -172,7 +171,7 @@ class ContentMainActivity6 : AppCompatActivity() {
 
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer= MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer= MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
 
                                 }

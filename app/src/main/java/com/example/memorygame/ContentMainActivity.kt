@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -26,8 +25,6 @@ import android.os.Looper
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.content_main_activity6.tryAgain
-
 
 class ContentMainActivity : AppCompatActivity() {
     private lateinit var button15: Button
@@ -157,7 +154,7 @@ else if(remainingTime>0) {
 
                                 // All pairs have been matched
                             // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer= MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer= MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
 
                                 }

@@ -13,8 +13,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.memorygame.R.drawable.*
 import kotlinx.android.synthetic.main.content_main_activity1.*
-import kotlinx.android.synthetic.main.content_main_activity1.tryAgain3
-
 class ContentMainActivity1 : AppCompatActivity() {
     private lateinit var button15: Button
     private lateinit var tryAgain3: Button
@@ -131,7 +129,7 @@ class ContentMainActivity1 : AppCompatActivity() {
                                 Toast.makeText(this@ContentMainActivity1, "Victory!", Toast.LENGTH_SHORT).show()
                                 // All pairs have been matched
                                 // Perform any desired actions, such as showing a message or restarting the game
-                                mediaPlayer = MediaPlayer.create(this, R.raw.wow)
+                                mediaPlayer = MediaPlayer.create(this, R.raw.victory)
                                 mediaPlayer?.setOnCompletionListener {
                                     // Acțiuni de efectuat după încheierea redării sunetului
                                     // De exemplu, poți afișa un mesaj de victorie sau reseta jocul
