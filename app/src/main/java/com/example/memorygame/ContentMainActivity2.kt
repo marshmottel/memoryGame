@@ -171,7 +171,7 @@ class ContentMainActivity2 : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(savannaback)
                                 lastClickedButton.text = "savannaback"
                                 turnOver = false
-                            }, 750)
+                            }, 500)
                         }
 
                         clicked = 0

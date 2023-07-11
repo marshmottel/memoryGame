@@ -186,7 +186,7 @@ class ContentMainActivity3 : AppCompatActivity() {
                              lastClickedButton.setBackgroundResource(cardback1)
                              lastClickedButton.text = "cardback1"
                              turnOver = false
-                         }, 750)
+                         }, 500)
                      }
                      clicked =0
                  }

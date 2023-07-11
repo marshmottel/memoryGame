@@ -180,7 +180,7 @@ class ContentMainActivity3b : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(jumanji_back)
                                 lastClickedButton.text = "jumanji_back"
                                 turnOver = false
-                            }, 600)
+                            }, 500)
                         }
                         clicked =0
                     }

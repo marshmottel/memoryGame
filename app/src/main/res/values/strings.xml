@@ -13,5 +13,6 @@
     <string name="easy">easy</string>
     <string name="medium">medium</string>
     <string name="hard">hard</string>
+    <string name="congratulations_game_complete">CONGRATULATIONS \n GAME COMPLETE</string>
 
 </resources>

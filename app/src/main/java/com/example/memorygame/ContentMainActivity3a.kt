@@ -179,7 +179,7 @@ class ContentMainActivity3a : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(cartey)
                                 lastClickedButton.text = "cartey"
                                 turnOver = false
-                            }, 600)
+                            }, 500)
                         }
                         clicked =0
                     }

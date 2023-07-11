@@ -180,7 +180,7 @@ else if(remainingTime>0) {
                                 lastClickedButton.setBackgroundResource(cardBack)
                                 lastClickedButton.text = "cardBack"
                                 turnOver = false
-                            }, 750)
+                            }, 500)
                         }
 
                         clicked = 0

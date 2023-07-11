@@ -157,7 +157,7 @@ class ContentMainActivity1 : AppCompatActivity() {
                                 lastClickedButton.setBackgroundResource(backyugioh)
                                 lastClickedButton.text = "cardBack"
                                 turnOver = false
-                            }, 750)
+                            }, 500)
                         }
 
                         clicked = 0
